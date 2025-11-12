@@ -1,0 +1,196 @@
+/* MOHAMMAD - page accueil */
+h1 {
+   font-size: 110px;
+    border: solid 5px;
+    border-radius: 40px;
+    text-align: center;
+    background-color: #ffd75d;
+ }
+#logo{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+input{
+    background-color: rgb(214, 214, 214);
+    height: 70px;
+    width: 500px;
+    font-size: 2em;
+    border: solid 1px;
+    border-radius: 30px;
+}
+button#search{
+    font-size: 4em;
+    border: solid 1px;
+    border-radius: 30px;
+}
+.header {
+    border: solid 1px;
+}
+/* Modification de style de pointeur menu */
+.navbar_item::before{
+    display: block;
+    content: "";
+    width: 0;
+    height: 5px;
+    background-color: rgb(204, 158, 63);
+    position: absolute;
+    top: 85px;
+    transition: all .8s ease;
+}
+.navbar_item:hover::before{
+    width: 500px;
+    transition: all .8s ease;
+}
+/* Paramètres navbar */
+nav {
+    position: sticky;
+    top: 0;
+}
+.navbar {
+    background-color: rgb(255, 215, 93);
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    border-radius: 30px;
+    border: black solid 1px;
+}
+.navbar_item{
+    width: 500px;
+    text-align: center;
+    padding: 20px 0;
+    transition: all .5s;
+}
+.navbar_link{
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.25em;
+    display: inline-flex;
+    align-items: center;
+}
+.navbar_item:hover{
+
+    background-color: rgba(144, 251, 155, 0.53);
+    color: #000000;
+    text-shadow: 1px 2px 3px 4px rgb(0, 0, 0);
+    transition: all .5s;
+}
+.navbar_item:hover .navbar_link{
+    color: #cc9e3f;
+}
+nav ul {
+    list-style-type: style type none;;
+    margin: 0;
+    padding: 0;
+}
+/*structure principale de mon site*/
+body {
+    position: relative;
+    width: 2200px;
+    margin: 0 auto;
+    padding: 0;
+    text-decoration: #6a6a69;
+}
+nav ul li {
+    font-size: 2em;
+}
+/*conteneur principal de la page principale*/
+main {
+    width: 100%;
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+article {
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 2%;
+    width: 100%;
+    background-image: url(./images/main-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0))               /*pour effet de lumière*/
+    drop-shadow(0 0 30px rgb(198, 125, 125));
+}
+
+div#Godrick {
+
+    display: flex;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-wrap: wrap;
+    color: #000000;
+    text-align: justify;
+    text-align-last: center;
+    line-height: 1.3;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 20px 30px;
+}
+
+div#Godrick::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+div#Maliketh {
+
+    display: flex;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-wrap: wrap;
+    color: #000000;
+    text-align: justify;
+    text-align-last: center;
+    line-height: 1.3;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 20px 30px;
+}
+
+div#Maliketh::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+img#image1 {
+    height: 500px;
+    width: 800px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0))             /*pour effet de lumière*/
+    drop-shadow(0 0 20px rgb(255, 255, 255));
+}
+
+img#image2 {
+    height: 500px;
+    width: 800px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0))              /*pour effet de lumière*/
+    drop-shadow(0 0 20px rgb(255, 255, 255));
+}
+
+img#image3 {
+    height: 500px;
+    width: 800px;
+    border-radius: 100%;
+    display: block;
+    margin: 20px auto;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0))             /*pour effet de lumière*/
+    drop-shadow(0 0 20px rgb(255, 255, 255));
+}
+
+/* DAVID - page histoire */
+
+/* CLEMENT - page produits */
+
+/* FARES - page contact */
