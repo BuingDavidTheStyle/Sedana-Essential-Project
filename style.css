@@ -1,11 +1,11 @@
 /* MOHAMMAD - page accueil */
 h1 {
-   font-size: 110px;
+    font-size: 110px;
     border: solid 5px;
     border-radius: 40px;
     text-align: center;
     background-color: #ffd75d;
- }
+}
 #logo{
     display: block;
     margin: 0 auto;
@@ -80,7 +80,7 @@ nav {
     color: #cc9e3f;
 }
 nav ul {
-    list-style-type: style type none;;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -159,7 +159,7 @@ div#Maliketh::first-letter {
     font-weight: bold;
 }
 
-img#image1 {
+img#ylang {
     height: 500px;
     width: 800px;
     border-radius: 50%;
@@ -167,6 +167,16 @@ img#image1 {
     margin: 20px auto;
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0))             /*pour effet de lumière*/
     drop-shadow(0 0 20px rgb(255, 255, 255));
+    opacity: 0;
+    transform: scale(0.9);
+    animation: apparition 1.5s ease-out forwards;
+}
+
+@keyframes apparition {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 img#image2 {
@@ -190,6 +200,7 @@ img#image3 {
 }
 
 /* DAVID - page histoire */
+
 body {
     transition: 1s;
 }
@@ -224,6 +235,5 @@ body {
 }
 
 /* CLEMENT - page produits */
-
 
 /* FARES - page contact */
