@@ -1,16 +1,46 @@
 /* MOHAMMAD - page accueil */
+
 h1 {
-    font-size: 110px;
-    border: solid 5px;
-    border-radius: 40px;
+    font-size: 120px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 0px;
     text-align: center;
-    background-color: #ffd75d;
-    color: #000000;
+    background-color: rgba(220, 173, 1, 0.541);
+    margin: 0;
+    color: inherit;
+    animation-name: nice;
+    animation-duration: 1s;
 }
+@keyframes nice{
+    from {zoom: 20%;}
+    to {zoom: 100%; }
+}
+/*.same {
+    color: black !important;
+}*/
 #logo{
     display: block;
     margin: 0 auto;
+    margin-top: 1%;
+}
+h2.space {
+    text-align: center;
+    font-size: 90px;
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 5%;
+}
+h2#except {
+    text-align: center;
+    font-size: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2#except>span  {
+    font-size: 90px;
+    height: 90px;
+    width: 90px;
+    display: inline-flex; 
+    justify-content: center;
+    justify-content: space-between;
 }
 input{
     background-color: rgb(214, 214, 214);
@@ -28,149 +58,162 @@ button#search{
 .header {
     border: solid 1px;
 }
-/* Modification de style de pointeur menu */
-.navbar_item::before{
-    display: block;
-    content: "";
-    width: 0;
-    height: 5px;
-    background-color: rgb(204, 158, 63);
-    position: absolute;
-    top: 85px;
-    transition: all .8s ease;
-}
+
+/* Effet Soulignement Hover (avant) */
 .navbar_item:hover::before{
     width: 500px;
     transition: all .8s ease;
+    top: 100%;
 }
+
 /* Paramètres navbar */
 nav {
     position: sticky;
     top: 0;
+    z-index: 1000;
+    margin-top: 1%;
 }
+
 .navbar {
-    background-color: rgb(255, 215, 93);
+    background-color: rgba(220, 173, 1, 0.541);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-content: center;
     padding: 0;
-    border-radius: 30px;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 90px;
     border: black solid 1px;
+    margin-bottom: 50px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.navbar_item{
-    width: 500px;
+
+.navbar_item {
+    flex: 1 1 auto;
+    width: 20em;
     text-align: center;
-    padding: 20px 0;
-    transition: all .5s;
+    padding: 1em 0;
+    position: relative;
+    border-radius: 90px; 
+    transition:
+        background-color .3s ease,
+        box-shadow .3s ease,
+        transform .2s ease;
 }
+
 .navbar_link{
     color: #000000;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.25em;
+    font-size: 1.5em;
     display: inline-flex;
     align-items: center;
 }
-.navbar_item:hover{
 
+.navbar_item:hover{
     background-color: rgba(144, 251, 155, 0.53);
-    color: #000000;
-    text-shadow: 1px 2px 3px 4px rgb(0, 0, 0);
-    transition: all .5s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px); 
 }
+
 .navbar_item:hover .navbar_link{
     color: #cc9e3f;
 }
+
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10px 20px;
+    display: inline-flex;
+    white-space: nowrap; 
+    width: fit-content;
 }
+
+nav ul li {
+    font-size: 2.2em;
+}
+
 /*structure principale de mon site*/
 body {
-    position: relative;
-    width: 2200px;
     margin: 0 auto;
     padding: 0;
     text-decoration: #6a6a69;
+    display: block !important;
 }
-nav ul li {
-    font-size: 2em;
-}
+
 /*conteneur principal de la page principale*/
 main {
-    width: 100%;
-    margin: 0;
+    width: 90%;
+    margin: 0 auto;
     margin-top: 30px;
     padding: 0;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: block !important;
 }
 
 article {
-    border: 1px solid;
+    margin: 0 auto;
+    border: 2px solid;
     border-color: #000000;
-    border-radius: 2%;
-    width: 100%;
-    background-image: url(./images/main-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0))               /*pour effet de lumière*/
-    drop-shadow(0 0 30px rgb(198, 125, 125));
+    border-radius: 100px;
+    width: 85%;
+    margin-top: 2%;
+        background: linear-gradient(
+        235deg,
+        rgba(197, 163, 11, 0.753),
+        rgba(248, 186, 0, 0.435),
+        rgba(45, 125, 53, 0.606),
+        rgba(123, 200, 137, 0.568)
+    );
 }
 
-div#Godrick {
-
-    display: flex;
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    flex-wrap: wrap;
-    color: #000000;
-    text-align: justify;
-    text-align-last: center;
-    line-height: 1.3;
-    max-width: 1400px;
-    margin: 30px auto;
-    padding: 20px 30px;
+/* Mode sombre du site*/
+body.dark article#gradient {
+    background: linear-gradient(
+        75deg,
+        rgba(15, 105, 37, 0.627),
+        rgba(176, 131, 17, 0.25),
+        rgba(226, 183, 8, 0.599),
+        rgba(0, 0, 0, 0.918)
+    );
 }
 
-div#Godrick::first-letter {
-    font-size: 2em;
-    font-weight: bold;
-}
-
-div#Maliketh {
-
-    display: flex;
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    flex-wrap: wrap;
-    color: #000000;
-    text-align: justify;
-    text-align-last: center;
-    line-height: 1.3;
-    max-width: 1400px;
-    margin: 30px auto;
-    padding: 20px 30px;
-}
-
-div#Maliketh::first-letter {
-    font-size: 2em;
-    font-weight: bold;
-}
-
-img#ylang {
-    height: 500px;
-    width: 800px;
-    border-radius: 50%;
-    display: block;
+.container1 {
     margin: 20px auto;
+    width: 90%;
+    padding: 8px;
+}
+.text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 53px;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 8%;
+    line-height: 1.4;
+}
+
+
+/* Image enveloppée dans partie intro */
+img#ylang {
+    float: right;
+    width: 1000px;            
+    height: 650px;            
+    border-radius: 50%;      
+    shape-outside: margin-box;  
+    margin: 0  auto 0 0;
+    margin-top: 50px;
+    object-fit: cover;
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0))             /*pour effet de lumière*/
     drop-shadow(0 0 20px rgb(255, 255, 255));
     opacity: 0;
     transform: scale(0.9);
     animation: apparition 1.5s ease-out forwards;
+}
+
+
+#Introduction p::first-letter {
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 0.7; 
 }
 
 @keyframes apparition {
@@ -180,24 +223,145 @@ img#ylang {
     }
 }
 
-img#image2 {
-    height: 500px;
-    width: 800px;
-    border-radius: 50%;
-    display: block;
-    margin: 20px auto;
-    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0))              /*pour effet de lumière*/
-    drop-shadow(0 0 20px rgb(255, 255, 255));
+
+/*slideshow pour les images*/
+
+* {
+    box-sizing: border-box;
 }
 
-img#image3 {
-    height: 500px;
-    width: 800px;
-    border-radius: 100%;
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+
+ .slideshow-container {
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;  
+    aspect-ratio: 16/9.5; /* même hauteur/largeur pour toutes les slides */
+    border-radius: 50px;
+    border: solid 5px rgb(255, 255, 255);
+    background-color: rgba(177, 150, 150, 0.517);
+    }
+
+/* Chaque slide */
+.mySlides {
+    position: absolute;
+    width: 100%;
+    left: 100%;            
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+    display: flex;             
+    align-items: center;       
+    justify-content: space-between; 
+    
+}
+
+.mySlides.active {
+    left: 0;
+    opacity: 1;
+}
+
+.mySlides.hide-left {
+    left: -100%;
+    opacity: 0;
+}
+
+/* Images des slides*/
+img.slides {
+    width: 60%;       
+    height: auto;      
+    object-fit: contain; 
     display: block;
-    margin: 20px auto;
-    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0))             /*pour effet de lumière*/
-    drop-shadow(0 0 20px rgb(255, 255, 255));
+    justify-content: left;
+    border-radius: 50px;
+}
+
+.descript {
+    width: 35%;              
+    font-size: 53px;          
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: inherit;           
+    text-align: center;
+    text-align: justify;
+    justify-content: center;          
+    align-items: center;
+    text-align-last: center;
+    margin: 0 auto;
+    line-height: 2.5;
+}
+
+/* Flèches */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: rgba(218,165,32,0.8); 
+    color: black;
+    border-radius: 10px;
+    user-select: none;
+    z-index: 10;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(218,165,32,1);
+}
+
+.next { right: 0; }
+.prev { left: 0; }
+
+/* 3 points du slideshow */
+.dot {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.4s ease;
+    margin-bottom: 7%;
+}
+
+.active-dot, .dot:hover {
+    background-color: #717171;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .slideshow-container {
+        height: 300px;
+    }
+
+    .prev, .next {
+        font-size: 25px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slideshow-container {
+        height: 220px;
+    }
+}
+
+footer {
+   position: fixed;
+    bottom: -120px;   
+    left: 0;
+    width: 100%;
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 30px;
+    transition: bottom 0.4s ease;
 }
 
 /* DAVID - page histoire */
@@ -206,49 +370,35 @@ body {
     transition: 1s;
 }
 .night-toggle {
-    width: 33px; /* 33px */
-    height: 33px; /* 33px */
-    right: 20px;
+    width: 33px;
+    height: 33px;
+    right: 400px;
     top: 20px;
     position: absolute;
+
 }
 .night-toggle:hover{
     cursor: pointer;
 }
 .moon {
     background-color: transparent;
-    box-shadow: -6px 1px 0 3px #275e8e;
-    border-left:3px solid #27476D;
+    box-shadow: -6px 1px 0 3px #000000;
+    border-left:3px solid #0f0f0f;
     border-radius:50%;
-    width: 50px;  /* 20px de base */
-    height: 50px; /* 20px de base */
-    margin-left:8px; /* 8px de base */ /* 125px de base */
-    margin-top:-5px;     /* 0px */ /* -5px */
-    transition: 1s;
+    width: 80px;
+    height: 80px;
+    margin-left:8px;
+    margin-top:0px;
+    transition: 0.05s;  
 }
 .sun {
-    background-color: #fdd462;
+    background-color: #ce8600;
     box-shadow: 2px 0px 0px 1px #D19C29;
     border-radius:50%;
-    width: 36px; /* 26px */
-    height: 36px; /* 26px */
-    transition: 1s;
-    margin-left:8px; /* 8px de base */
-    margin-top:0px; /* 0px */
+    width: 80px;
+    height: 80px;
+    transition: 0.05s;
 }
-.test{
-    background-color: #05fc7a;
-    width: auto;
-    height: 75px;
-    font-size: 60px;
-    color: #000000;
-    border: solid 3px;
-}
-
-.Numero{
-    color: goldenrod;
-}
-
 
 /* CLEMENT - page produits */
 
