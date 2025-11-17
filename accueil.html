@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sedana Essentials</title>
+    <title>Sedana Essential</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <header>
-    <script src="JavaScript.js"></script>
-    <h1 class="same">Sedana Essentials</h1>
-    <!-- Bouton pour switch le mode jour et nuit , David -->
+    <h1 class="same">Sedana Essential</h1>
+
+    <!-- Bouton mode clair/sombre -->
     <div class="night-toggle" onClick="switchMode()">
         <div id="moon" class="moon"></div>
     </div>
-    <!-- Bouton pour switch le mode jour et nuit , David -->
-
+  
     <img id="logo" src="images/logo.png">
 </header>
 
@@ -30,21 +31,60 @@
     </nav>
 
 <main>
-    <article>                       <!--contenu principal-->
-        <div id="Introduction">Bienvenue chez Sedana Essential, une association dédiée à la promotion du bien-être naturel à travers l’Ylang-Ylang, une fleur aux vertus apaisantes et reconnue depuis des générations.
-            Notre mission est de sensibiliser, partager et valoriser les bienfaits de cette essence unique, tout en soutenant des pratiques locales respectueuses de l’environnement et des communautés qui la cultivent.
-            Chez Sedana Essential, nous croyons en une approche authentique du bien-être : naturelle, simple et accessible à tous. À travers nos ateliers, actions solidaires et programmes éducatifs, nous œuvrons pour reconnecter chacun à un équilibre profond, inspiré par la nature.
-            Découvrez un univers où l’harmonie, la sérénité et l’engagement durable se rencontrent.</p>
-        </div>
-        <img id="ylang" src="images/ylang.webp" alt="corrumpted" width="700" height="500">
+    <article id="gradient"> 
+    <h2 id="except"> Faisons plus ample connaissance <span>❤︎</span> </h2>
 
+    <div id="Introduction">
+       <div class="container1"> <img id="ylang" src="images/ylang.webp" alt="corrumpted" width="700" height="500"></div>
+       <div class="text">
+        <p>Bienvenue chez Sedana Essential, une association dédiée à la promotion du bien-être naturel à travers l’<b>Ylang-Ylang</b>, une fleur aux vertus apaisantes et reconnue depuis des générations.
+        Notre mission est de sensibiliser, partager et valoriser les bienfaits de cette essence unique, tout en soutenant des pratiques locales respectueuses de l’environnement et des communautés qui la cultivent.</p>
+       <p> Chez Sedana Essential, nous croyons en une approche authentique du bien-être : naturelle, simple et accessible à tous.
+         À travers nos ateliers, actions solidaires et programmes éducatifs, nous œuvrons pour reconnecter chacun à un équilibre profond, inspiré par la nature.
+        Découvrez un univers où l’harmonie, la sérénité et l’engagement durable se rencontrent.</p></div>
+    </div>
+
+        <!--images slideshow-->
+<h2 class="space"> Des produits pour tous les goûts </h2>
+        <div class="slideshow-container">
+
+<div class="mySlides slide">
+  <img class="slides" src="images/diffiuser.jpg">
+  <div class="descript"> <h3>Diffuseur exotique</h3> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia perspiciatis, nemo, placeat dolor qui magni, rerum ex hic excepturi sed adipisci laboriosam asperiores voluptatibus reiciendis quod id vel assumenda dolorem?</p></div>
+</div>
+
+<div class="mySlides fade">
+  <img class="slides" src="images/candlejar.png">
+  <div class="descript"><h3>Bougie parfumée</h3> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia perspiciatis, nemo, placeat dolor qui magni, rerum ex hic excepturi sed adipisci laboriosam asperiores voluptatibus reiciendis quod id vel assumenda dolorem?</p></div>
+</div>
+
+<div class="mySlides fade">
+  <img class="slides" src="images/essentialOil.jpg">
+  <div class="descript"><h3>Huile thérapeutique</h3> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia perspiciatis, nemo, placeat dolor qui magni, rerum ex hic excepturi sed adipisci laboriosam asperiores voluptatibus reiciendis quod id vel assumenda dolorem?</p></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<h2 class="space"> Un processus de fabrication millimétré </h2>
         <div id="Maliketh">
-            <p>Maliketh, la Lame d’Ébène, veille sur les ruines du Crumbling Farum Azula, temple déchiré par le vent et le temps. Gardien du Fragment de la Rune de la Mort, il incarne la loyauté absolue envers la reine Marika, dont il fut le plus dévoué des protecteurs. Son devoir sacré — contenir la mort elle-même — fit de lui le geôlier d’un pouvoir qu’aucun être ne devrait porter. Guerrier farouche, à la fois noble et maudit, Maliketh incarne le dernier rempart de l’ordre ancien. Son affrontement avec le Sans-éclat n’est pas seulement une épreuve de force, mais la rencontre entre la fatalité et le devoir, entre la fin du monde et celui qui ose encore s’y opposer.</p>
+            <p> </p>
         </div>
         <img id="image3" src="images/maliketh.jpg" alt="black blade" width="700" height="500">
     </article>
 
 </main>
- <footer> Sedana Essential </footer>
+ <footer> © 2025 Sedana Essential — Tous droits réservés </footer>
+ <script src="JavaScript.js"></script>
+
 </body>
 </html>
