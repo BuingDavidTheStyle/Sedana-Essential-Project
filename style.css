@@ -5,6 +5,457 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     border: solid 0px;
     text-align: center;
+    margin: 0;
+    color: inherit;
+    animation-name: nice;
+    animation-duration: 1s;
+}
+@keyframes nice{
+    from {zoom: 20%;}
+    to {zoom: 100%; }
+}
+.same {
+    color: black !important;
+}
+#logo{
+    display: block;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+div.head {
+     background-color:   rgb(255, 220, 94);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.left, .right {
+    flex: 1;
+}
+
+.head h1 {
+    flex: 1;
+    text-align: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: solid 5px #151515;
+    border-radius: 60px;
+    padding: 5px 10px;
+    width: 850px;
+    height: 110px;
+    background: #f7f7f7;
+    background-color:   rgba(32, 150, 74, 0.442);
+    margin-left: 18%;
+}
+
+.search-bar input {
+    border: none;
+    border-radius: 60px;
+    text-align: center;
+    outline: none;
+    flex: 1;
+    padding: 8px;
+    font-size: 53px;
+    height: 80px;
+}
+
+.search-bar button {
+    border: none;
+    background: none;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+h2.space {
+    text-align: center;
+    font-size: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5%;
+}
+h2#except {
+    text-align: center;
+    font-size: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2#except>span  {
+    font-size: 110px;
+    height: 90px;
+    width: 90px;
+    display: inline-flex; 
+    justify-content: center;
+    justify-content: space-between;
+}
+input{
+    background-color: rgb(214, 214, 214);
+    height: 70px;
+    width: 500px;
+    font-size: 2em;
+    border: solid 1px;
+    border-radius: 30px;
+}
+
+.header {
+    border: solid 1px;
+}
+
+/* Effet Soulignement Hover (avant) */
+.navbar_item:hover::before{
+    width: 500px;
+    transition: all .8s ease;
+    top: 100%;
+}
+
+/* Paramètres navbar */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-top: 1%;
+}
+
+.navbar {
+    background-color:   rgb(255, 220, 94);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 90px;
+    border: black solid 1px;
+    margin-bottom: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar_item {
+    flex: 1 1 auto;
+    width: 20em;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    border-radius: 90px; 
+    transition:
+        background-color .3s ease,
+        box-shadow .3s ease,
+        transform .2s ease;
+}
+
+.navbar_link{
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5em;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar_item:hover{
+    background-color: rgba(144, 251, 155, 0.53);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px); 
+}
+
+.navbar_item:hover .navbar_link{
+    color: #cc9e3f;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 20px;
+    display: inline-flex;
+    white-space: nowrap; 
+    width: fit-content;
+}
+
+nav ul li {
+    font-size: 2.2em;
+}
+
+/*structure principale de mon site*/
+body {
+    margin: 0 auto;
+    padding: 0;
+    text-decoration: #6a6a69;
+    display: block !important;
+}
+
+/*conteneur principal de la page principale*/
+main {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 0;
+    display: block !important;
+}
+
+article {
+    margin: 0 auto;
+    border: 2px solid;
+    border-color: #000000;
+    border-radius: 100px;
+    width: 95%;
+    margin-top: 2%;
+        background: linear-gradient(
+        235deg,
+        rgba(214, 177, 9, 0.842),
+        rgba(248, 186, 0, 0.435),
+        rgba(45, 125, 53, 0.606),
+        rgba(123, 200, 137, 0.568)
+    );
+}
+
+/* Mode sombre du site*/
+body.dark article#gradient {
+    background: linear-gradient(
+        75deg,
+        rgba(15, 105, 37, 0.627),
+        rgba(176, 131, 17, 0.25),
+        rgba(226, 182, 8, 0.425),
+        rgba(0, 0, 0, 0.918)
+    );
+}
+
+.container1 {
+    margin: 20px auto;
+    width: 90%;
+    padding: 8px;
+}
+.text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 53px;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 8%;
+    line-height: 1.5;
+}
+
+
+/* Image enveloppée dans partie intro */
+img#ylang {
+    float: right;
+    width: 950px;            
+    height: 650px;            
+    border-radius: 50%;      
+    shape-outside: margin-box;  
+    margin: 0 0 0 0;
+    margin-top: 50px;
+    object-fit: cover;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0))             /*pour effet de lumière*/
+    drop-shadow(0 0 20px rgb(255, 255, 255));
+    opacity: 0;
+    transform: scale(0.9);
+    animation: apparition 1.5s ease-out forwards;
+}
+
+
+#Introduction p::first-letter {
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 0.7; 
+}
+
+@keyframes apparition {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/*slideshow pour les images*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+
+ .slideshow-container {
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;  
+    aspect-ratio: 16/9.6; /* même hauteur/largeur pour toutes les slides */
+    border-radius: 150px;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.432);
+    padding-left: 50%;
+    padding-right: 5%;
+    }
+
+/* Chaque slide */
+.mySlides {
+    position: absolute;
+    width: 100%;
+    left: 100%;            
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+    display: flex;             
+    align-items: center;       
+    justify-content: space-between; 
+    
+}
+
+.mySlides.active {
+    left: 0;
+    opacity: 1;
+}
+
+.mySlides.hide-left {
+    left: -100%;
+    opacity: 0;
+}
+
+/* Images des slides*/
+img.slides {
+    width: 60%;       
+    height: auto;      
+    object-fit: cover; 
+    display: block;
+    justify-content: left;
+    border-radius: 150px;
+    border: solid 30px rgba(0, 0, 0, 0);
+}
+
+.descript {
+    width: 35%;              
+    font-size: 65px;          
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: inherit;           
+    text-align: center;
+    text-align: justify;
+    justify-content: center;          
+    align-items: center;
+    text-align-last: center;
+    margin: 0 auto;
+    line-height: 2.5;
+}
+
+/* Flèches */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: rgba(218, 165, 32, 0.514); 
+    color: black;
+    border-radius: 60px;
+    user-select: none;
+    z-index: 10;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(84, 128, 49, 0.726);
+}
+
+.next { right: 0; }
+.prev { left: 0; }
+
+/* 3 points du slideshow */
+.dot {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.4s ease;
+    margin-bottom: 7%;
+}
+
+.active-dot, .dot:hover {
+    background-color: #717171;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .slideshow-container {
+        height: 300px;
+    }
+
+    .prev, .next {
+        font-size: 25px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slideshow-container {
+        height: 220px;
+    }
+}
+
+footer {
+   position: fixed;
+    bottom: -120px;   
+    left: 0;
+    width: 100%;
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 38px;
+    transition: bottom 0.4s ease;
+    bottom: 0;
+}
+
+/* DAVID - page histoire */
+
+body {
+    transition: 1s;
+}
+.night-toggle {
+    width: 33px;
+    height: 33px;
+    right: 400px;
+    top: 20px;
+    position: absolute;
+
+}
+.night-toggle:hover{
+    cursor: pointer;
+}
+.moon {
+    background-color: transparent;
+    box-shadow: -6px 1px 0 3px #000000;
+    border-left:3px solid #0f0f0f;
+    border-radius:50%;
+    width: 80px;
+    height: 80px;
+    margin-left:8px;
+    margin-top:0px;
+    transition: 0.05s;  
+}
+.sun {
+    background-color: #ce8600;
+    box-shadow: 2px 0px 0px 1px #D19C29;
+    border-radius:50%;
+    width: 80px;
+    height: 80px;
+    transition: 0.05s;
+}
+
+/* CLEMENT - page produits */
+
+/* FARES - page contact *//* MOHAMMAD - page accueil */
+
+h1 {
+    font-size: 120px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 0px;
+    text-align: center;
     background-color: rgba(220, 173, 1, 0.541);
     margin: 0;
     color: inherit;
@@ -403,3 +854,4 @@ body {
 /* CLEMENT - page produits */
 
 /* FARES - page contact */
+
