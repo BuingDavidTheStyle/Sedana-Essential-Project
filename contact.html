@@ -7,6 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+<div class="head">
+    <div class="left">
+        <form class="search-bar" action="/recherche.php" method="GET">
+            <input type="text" name="q" placeholder="Rechercher un produit..." required>
+            <button type="submit">🔍</button>
+        </form>
+    </div>
+
+    <h1 class="same">Sedana Essential</h1>
+
+    <div class="right"></div> <!-- vide mais nécessaire pour centrer -->
+</div>
+
+    <!-- Bouton mode clair/sombre -->
+    <div class="night-toggle" onClick="switchMode()">
+        <div id="moon" class="moon"></div>
+    </div>
+  
+    <img id="logo" src="images/logo.png">
+    
+</header>
      <nav>
         <ul class="navbar">
             <li class="navbar_item"><a class="navbar_link" href="accueil.html">
@@ -16,6 +38,8 @@
             <li class="navbar_item"><a class="navbar_link" href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    
+     <footer> © 2025 Sedana Essential — Tous droits réservés </footer>
+     <script src="JavaScript.js"></script>
 </body>
 </html>
+
