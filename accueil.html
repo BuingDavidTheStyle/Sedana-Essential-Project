@@ -10,7 +10,18 @@
 <body>
 
 <header>
+<div class="head">
+    <div class="left">
+        <form class="search-bar" action="/recherche.php" method="GET">
+            <input type="text" name="q" placeholder="Rechercher un produit..." required>
+            <button type="submit">🔍</button>
+        </form>
+    </div>
+
     <h1 class="same">Sedana Essential</h1>
+
+    <div class="right"></div> <!-- vide mais nécessaire pour centrer -->
+</div>
 
     <!-- Bouton mode clair/sombre -->
     <div class="night-toggle" onClick="switchMode()">
@@ -18,8 +29,8 @@
     </div>
   
     <img id="logo" src="images/logo.png">
+    
 </header>
-
       <nav>
         <ul class="navbar">
             <li class="navbar_item"><a class="navbar_link" href="accueil.html">
@@ -50,17 +61,17 @@
 
 <div class="mySlides slide">
   <img class="slides" src="images/diffiuser.jpg">
-  <div class="descript"> <h3>Diffuseur exotique</h3> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia perspiciatis, nemo, placeat dolor qui magni, rerum ex hic excepturi sed adipisci laboriosam asperiores voluptatibus reiciendis quod id vel assumenda dolorem?</p></div>
+  <div class="descript"> <h3>Diffuseur exotique</h3> <p>Laissez votre intérieur s’imprégner d’une atmosphère douce et apaisante grâce à notre diffuseur de parfum. Élégant et discret, il libère progressivement des notes naturelles qui transforment chaque espace en véritable cocon de bien-être.</p></div>
 </div>
 
 <div class="mySlides fade">
   <img class="slides" src="images/candlejar.png">
-  <div class="descript"><h3>Bougie parfumée</h3> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia perspiciatis, nemo, placeat dolor qui magni, rerum ex hic excepturi sed adipisci laboriosam asperiores voluptatibus reiciendis quod id vel assumenda dolorem?</p></div>
+  <div class="descript"><h3>Bougie parfumée</h3> <p>Fabriquée avec des ingrédients de qualité, notre bougie parfumée diffuse une fragrance délicate et chaleureuse. Parfaite pour créer une ambiance cosy, elle accompagne vos moments de détente et enveloppe votre intérieur d’un parfum harmonieux.</div>
 </div>
 
 <div class="mySlides fade">
   <img class="slides" src="images/essentialOil.jpg">
-  <div class="descript"><h3>Huile thérapeutique</h3> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia perspiciatis, nemo, placeat dolor qui magni, rerum ex hic excepturi sed adipisci laboriosam asperiores voluptatibus reiciendis quod id vel assumenda dolorem?</p></div>
+  <div class="descript"><h3>Huile thérapeutique</h3> <p>Pure, naturelle et soigneusement sélectionnée, notre huile essentielle offre une expérience sensorielle unique. Quelques gouttes suffisent pour rééquilibrer l’esprit, favoriser la relaxation et enrichir vos rituels bien-être au quotidien.</p></div>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -79,7 +90,7 @@
         <div id="Maliketh">
             <p> </p>
         </div>
-        <img id="image3" src="images/maliketh.jpg" alt="black blade" width="700" height="500">
+        
     </article>
 
 </main>
