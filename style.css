@@ -417,15 +417,11 @@ body {
     transition: 1s;
 }
 .night-toggle {
-    /* allow the toggle to contain an icon and a label */
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    width: 33px;
+    height: 33px;
     right: 400px;
     top: 20px;
     position: absolute;
-    width: auto;
-    height: auto;
 
 }
 .night-toggle:hover{
@@ -898,7 +894,6 @@ body {
 /* CLEMENT - page produits */
 
 /* FARES - page contact */
-
 
 
 
