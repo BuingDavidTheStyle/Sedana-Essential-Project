@@ -816,7 +816,6 @@ footer {
 }
 
 /* DAVID - page histoire */
-
 body {
     transition: 1s;
 }
@@ -849,8 +848,6 @@ body {
     width: 80px;
     height: 80px;
     transition: 0.05s;
-
-
 }
 .test{
     margin: 0;
@@ -862,16 +859,23 @@ body {
     text-align: center;
 }
 
-#longeurexactedulogo{
+/* Limiter la zone cliquable du logo sans contraindre la taille de l'image */
+.logo-link {
+    display: inline-block; /* s'ajuste à la taille de l'image */
+    margin: 0 auto;
+    padding: 0;
+}
+.logo-link img#logo {
     display: block;
     margin: 0 auto;
     margin-top: 1%;
+    height: auto; /* laisse l'image à sa taille naturelle */
+    cursor: pointer;
 }
-    #longeurexactedulogo{ display: table; margin: 0 auto; padding: 0; 
-    }
-    #longeurexactedulogo img#logo{ display: block; margin: 0 auto; margin-top: 1%; max-width: 2000px; height: auto; cursor: pointer; 
-    }
-
+/*  limiter la zone cliquable du logo à la seule image */
+    #longeurexactedulogo{ display: table; margin: 0 auto; padding: 0; }
+    #longeurexactedulogo img#logo{ display: block; margin: 0; margin-top: 1%; max-width: 900px; height: auto; cursor: pointer; }
+    
     img#ylang2 {
     float: right;
     width: 1000px;            
@@ -890,5 +894,6 @@ body {
 /* CLEMENT - page produits */
 
 /* FARES - page contact */
+
 
 
