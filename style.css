@@ -849,9 +849,46 @@ body {
     width: 80px;
     height: 80px;
     transition: 0.05s;
+
+
+}
+.test{
+    margin: 0;
+    padding: 0;
+    font-size: 85px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    border: solid 0px;
+    text-align: center;
 }
 
+#longeurexactedulogo{
+    display: block;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+    #longeurexactedulogo{ display: table; margin: 0 auto; padding: 0; 
+    }
+    #longeurexactedulogo img#logo{ display: block; margin: 0 auto; margin-top: 1%; max-width: 2000px; height: auto; cursor: pointer; 
+    }
+
+    img#ylang2 {
+    float: right;
+    width: 1000px;            
+    height: 650px;            
+    border-radius: 50%;      
+    shape-outside: margin-box;  
+    margin: 0  auto 0 0;
+    margin-top: 50px;
+    object-fit: cover;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0))             /*pour effet de lumière*/
+    drop-shadow(0 0 20px rgb(255, 255, 255));
+    opacity: 0;
+    transform: scale(0.9);
+    animation: apparition 1.5s ease-out forwards;
+}
 /* CLEMENT - page produits */
 
 /* FARES - page contact */
+
 
