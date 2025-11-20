@@ -101,7 +101,26 @@ function switchMode() {
         document.body.style.backgroundColor = "#fff";
         document.body.style.color = "#000";
     }
+    // mettre à jour le label texte immédiatement
+    updateModeLabel();
 }
+
+// Met à jour le label texte indiquant le mode (clair / sombre)
+function updateModeLabel(){
+    const label = document.getElementById('mode-label');
+    if(!label) return;
+    if(document.body.classList.contains('dark')){
+        label.textContent = 'Mode sombre';
+    } else {
+        label.textContent = 'Mode clair';
+    }
+}
+
+// Initialiser le label au chargement
+document.addEventListener('DOMContentLoaded', () => {
+    updateModeLabel();
+});
+
 
 /* CLEMENT - page produits */
 
