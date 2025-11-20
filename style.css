@@ -29,6 +29,7 @@ div.head {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    position: relative; /* permet de centrer #samE avec position:absolute */
 }
 .left, .right {
     flex: 1;
@@ -37,6 +38,17 @@ div.head {
 .head h1 {
     flex: 1;
     text-align: center;
+}
+
+/* Centrage absolu du titre principal pour qu'il reste parfaitement centré
+   quelle que soit la largeur des éléments gauche/droite (recherche, logo, etc.) */
+#samE {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0; 
+    z-index: 2; 
+    white-space: nowrap; 
 }
 
 .search-bar {
@@ -820,11 +832,15 @@ body {
     transition: 1s;
 }
 .night-toggle {
-    width: 33px;
-    height: 33px;
+    /* allow the toggle to contain an icon and a label */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     right: 400px;
     top: 20px;
     position: absolute;
+    width: auto;
+    height: auto;
 
 }
 .night-toggle:hover{
@@ -840,6 +856,11 @@ body {
     margin-left:8px;
     margin-top:0px;
     transition: 0.05s;  
+}
+.mode-label{
+    font-size: 18px;
+    color: inherit;
+    user-select: none;
 }
 .sun {
     background-color: #ce8600;
@@ -891,6 +912,10 @@ body {
     transform: scale(0.9);
     animation: apparition 1.5s ease-out forwards;
 }
+#samE {
+    text-align: center;
+}
+
 /* CLEMENT - page produits */
 
 /* FARES - page contact */
