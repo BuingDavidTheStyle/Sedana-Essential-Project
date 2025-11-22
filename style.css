@@ -238,7 +238,7 @@ body::before {
     width: 100vw;
     height: 100vh;
 
-    background-image: url(images/bien\ etre.jpg);
+    background-image: url(images/jour.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -250,7 +250,7 @@ body::before {
 
 /* couche du fond (mode sombre) */
 body.dark-mode::before {
-    background-image: url(images/nightforest.jpg);
+    background-image: url(images/nuit.jpg);
     opacity: 1;
 }
 
