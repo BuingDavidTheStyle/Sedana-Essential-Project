@@ -4,51 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">   
+    <title>Produits</title>
 </head>
+
+
 <body>
-<header>
-<div class="head">
+<header class="header2">
+
     <div class="left">
         <form class="search-bar" action="/recherche.php" method="GET">
-            <input type="text" name="q" placeholder="Rechercher un produit..." required>
-            <button type="submit">🔍</button>
+            <input type="text" name="q" placeholder="Rechercher un produit" required>
+            <button type="submit">Recherche</button>
         </form>
     </div>
 
-    <h1 class="same">Sedana Essential</h1>
+    <h1 id="samE" class="same">Sedana Essential</h1>
+    <h3 class="test"><marquee width="90%" direction="left" height="100px">
+        Contactez Nous <span class="Numero">+44 7342 36 85 84 </span>Disponibilité : 9h-17h
+    </marquee>
+    </h3>
 
-    <div class="right"></div> <!-- vide mais nécessaire pour centrer -->
-</div>
-
-    <!-- Bouton mode clair/sombre -->
+    <div class="right"></div>
     <div class="night-toggle" onClick="switchMode()">
         <div id="moon" class="moon"></div>
+        <span id="mode-label" class="taille-ecriture-bouton">Mode clair</span>
     </div>
-  
-      </div>
-     <div class="test">
-        <div class="test_content">
-       <span>Contactez-nous au <b>+ 44 73.42.36.85.84</b></span>
-       </div>
-    </div>
-    
-    <div class="lang-toggle" onclick="switchLang()">🇫🇷 / 🇬🇧</div>
 
-    <img id="logo" src="images/logo.png">
-    
 </header>
+
+<div class="centre">
+    <a href="accueil.html">
+        <img class="logoC" src="images/logo.png" alt="logo">
+    </a>
+</div>
+
      <nav>
+
         <ul class="navbar">
             <li class="navbar_item"><a class="navbar_link" href="accueil.html">
                 <span class="material-icons">Accueil</span></a></li>
             <li class="navbar_item"><a class="navbar_link" href="histoire.html">Histoire</a></li>
-            <li class="navbar_item"><a class="navbar_link" href="produits.html"><span class="material-icons">Produits</span></a></li>
+            <li class="navbar_item"><a class="navbar_link" href="produit.html"><span class="material-icons">Produits</span></a></li>
             <li class="navbar_item"><a class="navbar_link" href="contact.html">Contact</a></li>
         </ul>
-    </nav>
-     <footer> © 2025 Sedana Essential — Tous droits réservés </footer>
-     <script src="JavaScript.js"></script>
+
+     </nav>
+
+     <main>
+
+     <article id="pastrans">
+         <a href="contact.html">
+            <img class="float" src="images/formulaire-removebg-preview.png">
+         </a>
+         <p class="C"><--  appuyer ici pour être dirigé vers le formulelaire de participation aux ateliers</p>
+
+         <!-- slides ateliers -->
+         <div class="Cslider">
+             <div class="Cslides">
+                 <img src="images/foret.jpg" class="Cslide Cactive">
+                 <img src="images/essentialOil.jpg" class="Cslide">
+                 <img src="images/diffiuser.jpg" class="Cslide">
+             </div>
+
+             <!-- Boutons -->
+             <button class="Cprev">&#10094;</button>
+             <button class="Cnext">&#10095;</button>
+         </div>
+
+     </article>
+
+    <article id="pastrans2">
+     <div class="sliderA-container">
+
+         <div class="sliderA-track">
+             <!-- Slides originales -->
+             <div class="sliderA-slide">
+                 <img src="images/diffiuser.jpg">
+             </div>
+
+             <div class="sliderA-slide">
+                 <img src="images/candlejar.png">
+             </div>
+
+             <div class="sliderA-slide">
+                 <img src="images/essentialOil.jpg">
+             </div>
+
+             <!-- Dupliquées pour infinité -->
+             <div class="sliderA-slide">
+                 <img src="images/diffiuser.jpg">
+             </div>
+
+             <div class="sliderA-slide">
+                 <img src="images/candlejar.png">
+             </div>
+
+             <div class="sliderA-slide">
+                 <img src="images/essentialOil.jpg">
+             </div>
+         </div>
+
+     </div>
+    </article>
+
+        <article id="catalogue">
+
+            <!-- BOUTONS CATEGORIES -->
+            <div class="Ccategories">
+                <button class="Ccat-btn" data-cat="bougies">Bougies</button>
+                <button class="Ccat-btn" data-cat="sel_de_bain">Fondants parfumés</button>
+                <button class="Ccat-btn" data-cat="diffuseurs">Diffuseurs</button>
+                <button class="Ccat-btn" data-cat="huile_essentiels">Brumes d'oreiller</button>
+                <button class="Ccat-btn" data-cat="pots">Pots-pourris</button>
+            </div>
+
+            <!-- SECTION QUI CHANGE -->
+            <section id="Cproduits-zone">
+                <p style="text-align:center; color:gray;">
+                    Sélectionnez une catégorie pour afficher les produits
+                </p>
+            </section>
+
+        </article>
+
+     </main>
+<footer id="footerC">© 2025 Sedana Essential — Tous droits réservés
+</footer>
 </body>
 </html>
+
