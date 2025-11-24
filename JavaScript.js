@@ -349,4 +349,104 @@ function switchMode() {
 
 /* CLEMENT - page produits */
 
+//slide pour ateliers
+let Cindex = 0;
+const Cslides = document.querySelectorAll('.Cslide');
+
+function showCslide(i) {
+    Cslides.forEach(slide => slide.classList.remove('Cactive'));
+    Cslides[i].classList.add('Cactive');
+}
+
+function nextCslide() {
+    Cindex = (Cindex + 1) % Cslides.length;
+    showCslide(Cindex);
+}
+
+function prevCslide() {
+    Cindex = (Cindex - 1 + Cslides.length) % Cslides.length;
+    showCslide(Cindex);
+}
+
+document.querySelector('.Cnext').addEventListener('click', nextCslide);
+document.querySelector('.Cprev').addEventListener('click', prevCslide);
+
+// Auto défilement 5 secondes
+setInterval(nextCslide, 5000); //en ms
+
+//catalogue
+
+// Listes des produits par catégorie
+const CcatalogueProduits = {
+    bougies: [
+        { img: "images/bougie1.jpg", desc: "Aromatherapy Candle Workshop – Featuring Ylang Ylang\n" },
+        { img: "images/bougie2.jpg", desc: "Bougie coco sauvage" },
+        { img: "images/bougie3.jpg", desc: "Bougie coco sauvage" },
+        { img: "images/bougie4.jpg", desc: "Bougie coco sauvage" },
+        { img: "images/candlejar.png", desc: "Bougie fleur de coton" }
+    ],
+
+    sel_de_bain: [
+        { img: "images/bath_salt.png", desc: "Fondant floral" }
+    ],
+
+    diffuseurs: [
+        { img: "images/diffiuser.jpg", desc: "Diffuseur bâtonnets" },
+        { img: "images/diffuseur2.jpg", desc: "Diffuseur zen" }
+
+    ],
+
+    huile_essentiels: [
+        { img: "images/essentialOil.jpg", desc: "Brume apaisante" },
+    ],
+
+    pots: [
+        { img: "images/pot1.jpg", desc: "Pot-pourri floral" },
+        { img: "images/pot2.jpg", desc: "Pot-pourri eucalyptus" }
+    ]
+};
+
+// Sélection des boutons et de la zone d'affichage
+const Cbuttons = document.querySelectorAll(".Ccat-btn");
+const Czone = document.getElementById("Cproduits-zone");
+
+// Action lors du clic sur un bouton
+Cbuttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        // Reset du bouton actif
+        Cbuttons.forEach(b => b.classList.remove("Cactive"));
+        btn.classList.add("Cactive");
+
+        // Récupérer la catégorie
+        const cat = btn.dataset.cat;
+        const produits = CcatalogueProduits[cat];
+
+        // Génération HTML
+        let html = `<div class="Cproduits-grid">`;
+
+        produits.forEach(p => {
+            html += `
+                <div class="Cproduit">
+                    <img src="${p.img}">
+                    <p>${p.desc}</p>
+                </div>
+            `;
+        });
+
+        html += `</div>`;
+
+        // Injection dans la zone
+        Czone.innerHTML = html;
+    });
+});
+
+function showSlides(n) {
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+
+    if (slides.length === 0) return; //si ya pas de slide
+}
+
 /* FARES - page contact */
+
