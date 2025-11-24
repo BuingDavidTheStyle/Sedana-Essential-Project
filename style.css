@@ -603,5 +603,317 @@ body.dark .night-toggle {
 }
 
 /* CLEMENT - page produits */
+/* Pepito - page produit */
+/* Container pour slide auto */
+.sliderA-container {
+    width: 90%;
+    margin: 5%;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid white;
+    border-radius: 20px;
+}
+
+/* Bande défilante */
+.sliderA-track {
+    display: flex;
+    width: max-content;
+    animation: sliderA-scroll 20s linear infinite;
+}
+
+
+/* Slide */
+.sliderA-slide {
+    min-width: 100%;
+}
+
+.sliderA-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Animation */
+@keyframes sliderA-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-300%); } /* 3 slides uniques */
+}
+
+/*faire quand bouton mode nuit mettre forete nuit sinon jour
+body {
+        background-image: url("images/foret.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+
+}
+
+body.dark {
+    background-image: url("images/foret_nuit.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #141D26;
+    color: #fff;
+}
+
+*/
+/* test fond peu chargés
+body {
+    background-image: url("images/ylangblanc.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+body.dark {
+    background-image: url("images/ylangnoir.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #141D26;
+    color: #fff;
+}
+*/
+/* different dégradé de couleur pour conteneur article */
+#pastrans {
+    margin: 0 auto;
+    border: 2px solid #000000;
+    border-radius: 100px;
+    width: 85%;
+    margin-top: 2%;
+    background: linear-gradient(
+            235deg,
+            rgb(248, 186, 0),
+            rgb(45, 125, 53),
+            rgb(123, 200, 137),
+            rgb(197, 163, 11)
+    );
+}
+#pastrans2 {
+    margin: 0 auto;
+    border: 2px solid #000000;
+    border-radius: 100px;
+    width: 85%;
+    margin-top: 2%;
+    background: linear-gradient(
+            235deg,
+            rgb(123, 200, 137),
+            rgb(248, 186, 0),
+            rgb(45, 125, 53)
+        );
+}
+#pastrans3 {
+    margin: 0 auto;
+    border: 2px solid #000000;
+    border-radius: 100px;
+    width: 85%;
+    margin-top: 2%;
+    background: linear-gradient(
+            235deg,
+            rgb(45, 125, 53),
+            rgb(123, 200, 137),
+            rgb(248, 186, 0)
+    );
+}
+div.centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.logoC {
+
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    background-size: 100%;
+}
+.header2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: rgb(255, 220, 94);
+}
+.taille-ecriture-bouton{
+    font-size: 45px;
+    color: inherit;
+    user-select: none;
+}
+p.C {
+    font-size: 120px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 0px;
+    text-align: center;
+    margin: 0;
+    color: inherit;
+}
+img.float {
+    float: left;
+}
+/*defilateur pour les image ateliers*/
+.Cslider {
+    position: relative;
+    width: 80%;
+    height: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.Cslides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Cslide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.Cslide.Cactive {
+    opacity: 1;
+}
+
+/* Boutons */
+.Cprev, .Cnext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    font-size: 30px;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.Cprev { left: 10px; }
+.Cnext { right: 10px; }
+
+
+.CsliderA-container {
+    width: 90%;
+    margin: 5%;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid white;
+    border-radius: 20px;
+}
+
+.CsliderA-track {
+    display: flex;
+    width: max-content;
+    transition: transform 1s ease-in-out;
+}
+
+.CsliderA-slide {
+    min-width: 100%;
+}
+
+.CsliderA-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Boutons */
+.CsliderA-btn {
+    position: absolute;
+    bottom: 10px;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.CsliderA-set1 { left: 30%; }
+.CsliderA-set2 { left: 50%; }
+
+/* catalogue */
+
+/* conteneur */
+#catalogue {
+    width: 75%;
+    padding: 40px;
+    min-height: 500px;
+    transform: scale(1.2);
+    transform-origin: top center;
+}
+
+/* Boutons catégories */
+.Ccategories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.Ccat-btn {
+    padding: 15px 25px;
+    font-size: 50px;
+    border: 2px solid #aaa;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.Ccat-btn:hover {
+    background: #f0f0f0;
+}
+
+.Ccat-btn.Cactive { /* quand bouton cliqué -> bouton actif ->bouton en couleurs*/
+    background: orange;
+    color: white;
+    border-color: orange;
+}
+
+/* Zone d’affichage des produits */
+#Cproduits-zone {
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+}
+
+/* Produits */
+.Cproduits-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.Cproduit {
+    width: 180px;
+    text-align: center;
+}
+
+.Cproduit img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border: 2px solid #aaa;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+
 
 /* FARES - page contact */
+
