@@ -11,16 +11,16 @@
 }
 
 h1 {
-    font-size: 120px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 170px;
+      font-family: "MonteCarlo", cursive;
     border: solid 0px;
     text-align: center;
     margin: 0;
     color: inherit;
     animation-name: nice;
     animation-duration: 2s;
-      filter: drop-shadow(40px 40px 60px rgb(255, 255, 255))                  /*pour effet de lumière*/
-            drop-shadow(0 0 30px rgb(255, 255, 255));
+      filter: drop-shadow(0px 0px 10px rgb(255, 255, 255))                  /*pour effet de lumière*/
+            drop-shadow(0 0 10px rgb(255, 255, 255));
 }
 
 .same {
@@ -112,17 +112,17 @@ div.head {
 h2.space {
     text-align: center;
     font-size: 90px;
-    font-family: Arial, Helvetica, sans-serif;
+     font-family: "Shantell Sans", cursive; 
     margin-bottom: 5%;
-        filter: drop-shadow(40px 40px 60px rgb(255, 255, 255))                  /*pour effet de lumière*/
-            drop-shadow(0 0 30px rgb(52, 181, 110));
+        filter: drop-shadow(0 0 5px rgb(255, 255, 255))                  /*pour effet de lumière*/
+            drop-shadow(0 0 5px rgb(255, 174, 0));
 }
 h2#except {
     text-align: center;
     font-size: 90px;
-    font-family: Arial, Helvetica, sans-serif;
-        filter: drop-shadow(40px 40px 60px rgb(255, 255, 255))                  /*pour effet de lumière*/
-            drop-shadow(0 0 30px rgb(63, 200, 124));
+       font-family: "Shantell Sans", cursive;
+        filter: drop-shadow(0 0 5px rgb(255, 255, 255))                  /*pour effet de lumière*/
+            drop-shadow(0 0 5px rgb(255, 166, 0));
 }
 h2#except>span  {
     font-size: 110px;
@@ -226,35 +226,43 @@ body {
     margin: 0;
     padding: 0;
     color: #000;
-    transition: color 0.6s ease;
+    transition: color 0.3s ease;
 }
 
-/* couche du fond (mode clair) */
-body::before {
+/* ---- Couche de fond mode clair ---- */
+body::before,
+body::after {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-
-    background-image: url(images/jour.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
     z-index: -1;
-    opacity: 1;
-    transition: opacity 1s ease;
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* couche du fond (mode sombre) */
-body.dark-mode::before {
+/* Image du mode clair (toujours visible en arrière-plan) */
+body::before {
+    background-image: url(images/jour2.jpg);
+    opacity: 1;
+}
+
+/* Image du mode sombre, superposée mais invisible par défaut */
+body::after {
     background-image: url(images/nuit.jpg);
+    opacity: 0;
+}
+
+/* ---- En mode sombre, on fait fade-in la deuxième couche ---- */
+body.dark-mode::after {
     opacity: 1;
 }
 
-/* texte */
+/* Texte */
 body.dark-mode {
     color: white;
 }
@@ -276,11 +284,11 @@ article {
     width: 95%;
     margin-top: 2%;
         background: linear-gradient(
-        235deg,
-        rgba(214, 177, 9, 0.842),
-        rgba(248, 186, 0, 0.435),
-        rgba(45, 125, 53, 0.606),
-        rgba(123, 200, 137, 0.568)
+        215deg,
+        rgba(185, 182, 182, 0.842),
+        rgba(248, 186, 0, 0.651),
+        rgba(123, 200, 137, 0.753),
+         rgba(163, 163, 163, 0.842)
     );
 }
 
@@ -307,6 +315,7 @@ body.dark article#gradient {
     margin: 0 auto;
     margin-bottom: 8%;
     line-height: 1.5;
+  
 }
 
 
@@ -361,7 +370,8 @@ body {
     aspect-ratio: 16/9.6; /* même hauteur/largeur pour toutes les slides */
     border-radius: 150px;
     border: solid 1px rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.315);
+    background-color: rgba(0, 0, 0, 0.202);
+         filter: drop-shadow(0 0 10px rgb(255, 194, 141));                  /*pour effet de lumière*/
     padding-left: 50%;
     padding-right: 5%;
     }
@@ -472,25 +482,131 @@ img.slides {
     }
 }
 
+/*Processus de fabrication*/
+/* ---- TIMELINE ---- */
+.timeline {
+    width: 100%;
+    max-width: 3900px;  
+    margin: 80px auto;
+    position: relative;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    position: relative;
+}
+
+/* Numéro rond */
+.timeline-number {
+    width: 150px;
+    height: 150px;
+    background-color: #e6c17b; /* couleur dorée / naturelle */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 120px;
+    color: #000;
+    margin: 60px;
+}
+
+h3{
+    text-align: center;
+}
+
+/* Bloc texte */
+.timeline-content {
+    background: rgba(156, 106, 12, 0.253);
+    border-radius: 70px;
+    max-width: 1330px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    font-size: 55px;
+    text-align: center;
+    text-align: justify;
+    text-align-last: center;
+    padding: 50px 55px;
+      filter: drop-shadow(0 0 10px rgb(255, 255, 255))                  /*pour effet de lumière*/
+            drop-shadow(0 0 10px rgb(255, 255, 255));
+}
+
+/*images du timeline (etapes)*/
+.steps {
+   width: 1245px;            
+    height: 670px;            
+    border-radius: 70px;
+    margin: 50px;
+        filter: drop-shadow(0 0 10px rgb(255, 255, 255))                  /*pour effet de lumière*/
+            drop-shadow(0 0 10px rgb(255, 255, 255));  
+}
+
+/* Alignements alternés */
+.timeline-item.left {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0;
+}
+
+.timeline-item.right {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 0;
+}
+
+/* Adaptation mobile */
+@media (max-width: 750px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: row !important;
+        gap: 15px;
+    }
+
+    .timeline-number {
+        margin-left: 10px;
+    }
+
+    .timeline-content {
+        max-width: 100%;
+    }
+}
+
+/*footer*/
 footer {
-   position: fixed;
+    display: flex;
+    justify-content: space-between;
+     position: fixed;
     bottom: -120px;   
     left: 0;
     width: 100%;
-    background: #000;
+    background: rgba(0, 0, 0, 0.699);
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 10px 20px;
     font-size: 38px;
+    justify-content: center;
+    align-items: center;
     transition: bottom 0.4s ease;
+    gap: 30px;
     bottom: 0;
 }
 
-/* DAVID - page histoire */
 
-body {
-    transition: 1s;
+.social-links img {
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    border-radius: 50%;
 }
+
+.social-links img:hover {
+    transform: scale(1.15);
+}
+
+/* DAVID - page histoire */
 
 /* Nouveau look du bouton, sans changer ton HTML */
 .night-toggle {
@@ -546,7 +662,7 @@ body.dark .night-toggle {
     margin: 0 auto;
     display: flex;
     white-space: nowrap;
-    font-size: 50px;
+    font-size: 55px;
     text-align: center;
      background-color:   rgba(169, 255, 161, 0.514);
     filter: drop-shadow(0 0 2px black);
@@ -1027,5 +1143,6 @@ img.float {
 
 
 /* FARES - page contact */
+
 
 
