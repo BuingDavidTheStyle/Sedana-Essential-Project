@@ -11,27 +11,36 @@
 
 
 <body>
-<header class="header2">
+<header>
+    <div class="head">
+        <div class="left">
+            <form class="search-bar" action="/recherche.php" method="GET">
+                <input type="text" name="q" placeholder="Rechercher un produit..." required>
+                <button type="submit">🔍</button>
+            </form>
+        </div>
 
-    <div class="left">
-        <form class="search-bar" action="/recherche.php" method="GET">
-            <input type="text" name="q" placeholder="Rechercher un produit" required>
-            <button type="submit">Recherche</button>
-        </form>
+        <h1 id="samE"class="same">Sedana Essential</h1>
+
+        <div class="right"></div> <!-- vide mais nécessaire pour centrer -->
     </div>
 
-    <h1 id="samE" class="same">Sedana Essential</h1>
-    <h3 class="test"><marquee width="90%" direction="left" height="100px">
-        Contactez Nous <span class="Numero">+44 7342 36 85 84 </span>Disponibilité : 9h-17h
-    </marquee>
-    </h3>
-
-    <div class="right"></div>
+    <!-- Bouton mode clair/sombre -->
     <div class="night-toggle" onClick="switchMode()">
         <div id="moon" class="moon"></div>
-        <span id="mode-label" class="taille-ecriture-bouton">Mode clair</span>
+
+    </div>
+    <div class="test">
+        <div class="test_content">
+            <span>Contactez-nous au <b>+ 44 73.42.36.85.84</b></span>
+        </div>
     </div>
 
+    <div class="lang-toggle" onclick="switchLang()">🇫🇷 / 🇬🇧</div>
+
+    <img id="logo" src="images/logo.png">
+
+    <!-- Raccourci Vers le menu accueil -->
 </header>
 
 <div class="centre">
@@ -63,7 +72,7 @@
          <!-- slides ateliers -->
          <div class="Cslider">
              <div class="Cslides">
-                 <img src="images/foret.jpg" class="Cslide Cactive">
+                 <img src="images/jour.jpg" class="Cslide Cactive">
                  <img src="images/essentialOil.jpg" class="Cslide">
                  <img src="images/diffiuser.jpg" class="Cslide">
              </div>
@@ -74,39 +83,55 @@
          </div>
 
      </article>
+         <article id="gradient">
+           <div class="maj">
+             <div class="Ccontainer">
+
+                 <!-- SECTION PANIER -->
+                 <div class="Csection" id="section-panier">
+                     <h2 class="Ctitle">panier</h2>
+
+                     <p id="panier-info">panier vide ou X article dans votre panier</p>
+
+                     <button id="btn-payer">Commander et payer</button>
+                 </div>
+
+                 <!-- DIVISEUR -->
+                 <div class="divider"></div>
+
+                 <!-- SECTION PAIEMENT -->
+                 <div class="Csection" id="section-paiement">
+                     <h2 class="title">section paiement en ligne</h2>
+
+                     <div id="formulaire-paiement" class="hidden">
+                         <p>num carte bancaire :</p>
+                         <input type="text" placeholder="XXXX XXXX XXXX XXXX">
+
+                         <p>num tél :</p>
+                         <input type="text" placeholder="06 XX XX XX XX">
+
+                         <button>Payer maintenant</button>
+                     </div>
+                 </div>
+
+             </div>
+           </div>
+         </article>
 
     <article id="pastrans2">
-     <div class="sliderA-container">
 
-         <div class="sliderA-track">
-             <!-- Slides originales -->
-             <div class="sliderA-slide">
-                 <img src="images/diffiuser.jpg">
-             </div>
+            <div class="CsliderA-buttons">
+                <button id="lotA">Lot A</button>
+                <button id="lotB">Lot B</button>
+            </div>
 
-             <div class="sliderA-slide">
-                 <img src="images/candlejar.png">
-             </div>
+            <div class="CsliderA-container">
+                <div class="CsliderA-track" id="CsliderTrack">
+                    <!-- Images injectées en JS -->
+                </div>
+            </div>
 
-             <div class="sliderA-slide">
-                 <img src="images/essentialOil.jpg">
-             </div>
 
-             <!-- Dupliquées pour infinité -->
-             <div class="sliderA-slide">
-                 <img src="images/diffiuser.jpg">
-             </div>
-
-             <div class="sliderA-slide">
-                 <img src="images/candlejar.png">
-             </div>
-
-             <div class="sliderA-slide">
-                 <img src="images/essentialOil.jpg">
-             </div>
-         </div>
-
-     </div>
     </article>
 
         <article id="catalogue">
@@ -129,10 +154,12 @@
 
         </article>
 
+
      </main>
 <footer id="footerC">© 2025 Sedana Essential — Tous droits réservés
 </footer>
 </body>
 </html>
+
 
 
