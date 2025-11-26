@@ -913,7 +913,119 @@ img.float {
     margin-bottom: 10px;
 }
 
+.CsliderA-container {
+    width: 90%;
+    margin: 5% auto;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid white;
+    border-radius: 15px;
+}
+
+.CsliderA-buttons {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.CsliderA-buttons button {
+
+    padding: 15px 25px;
+    font-size: 50px;
+    border: 2px solid #aaa;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Bande défilante */
+.CsliderA-track {
+    display: flex;
+    width: max-content;
+    animation: CsliderA-scroll 20s linear infinite;
+}
+
+/* Slide */
+.CsliderA-slide {
+    min-width: 100%;
+}
+
+.CsliderA-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Animation */
+@keyframes CsliderA-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-300%); } /* 3 images par lot */
+}
+
+/* partie paiment*/
+
+
+.Ccontainer {
+    display: flex;
+    border-radius: 150px;
+    padding: 20px;
+}
+
+.Csection {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+.Ctitle {
+    background: #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.divider {
+    width: 2px;
+    background: #ccc;
+}
+
+#btn-payer {
+    margin-top: 40px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: #000;
+    color: white;
+    cursor: pointer;
+}
+
+#formulaire-paiement.hidden {
+    display: none;
+}
+
+#formulaire-paiement input {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+
+#formulaire-paiement button {
+    padding: 12px 25px;
+    background: #333;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.maj {
+    font-size: 120px;
+}
+
 
 
 /* FARES - page contact */
+
 
