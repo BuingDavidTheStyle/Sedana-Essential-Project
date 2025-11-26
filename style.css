@@ -717,7 +717,14 @@ body.dark .night-toggle {
 #samE {
     text-align: center;
 }
-
+#logo {
+    display : block;
+}
+a[aria-label="Accueil"]{
+    display: block;
+    width: fit-content;
+    margin : 0 auto;
+}
 /* CLEMENT - page produits */
 /* Pepito - page produit */
 /* Container pour slide auto */
@@ -1143,6 +1150,7 @@ img.float {
 
 
 /* FARES - page contact */
+
 
 
 
