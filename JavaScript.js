@@ -447,6 +447,64 @@ function showSlides(n) {
 
     if (slides.length === 0) return; //si ya pas de slide
 }
+// LOTS D’IMAGES
+const lotA = [
+    "images/diffiuser.jpg",
+    "images/candlejar.png",
+    "images/essentialOil.jpg"
+];
+
+const lotB = [
+    "images/bougie1.jpg",
+    "images/bougie2.jpg",
+    "images/bougie3.jpg"
+];
+
+// Fonction pour injecter les images + duplicatas pour defilement infini
+function loadImages(images) {
+    const track = document.getElementById("CsliderTrack");
+    track.innerHTML = ""; // Reset
+
+    // Lot original
+    images.forEach(src => {
+        createSlide(src, track);
+    });
+
+    // Duplicata pour boucle infinie
+    images.forEach(src => {
+        createSlide(src, track);
+    });
+
+    // Reset l’animation pour la relancer proprement
+    track.style.animation = "none";
+    void track.offsetWidth;
+    track.style.animation = "";
+}
+
+// création d’un slide
+function createSlide(src, container) {
+    const div = document.createElement("div");
+    div.className = "CsliderA-slide";
+
+    const img = document.createElement("img");
+    img.src = src;
+
+    div.appendChild(img);
+    container.appendChild(div);
+}
+
+// Boutons
+document.getElementById("lotA").addEventListener("click", () => loadImages(lotA));
+document.getElementById("lotB").addEventListener("click", () => loadImages(lotB));
+
+// Charger Lot A par défaut
+loadImages(lotA);
+
+//paiment
+document.getElementById("btn-payer").addEventListener("click", () => {
+    document.getElementById("formulaire-paiement").classList.remove("hidden");
+});
 
 /* FARES - page contact */
+
 
