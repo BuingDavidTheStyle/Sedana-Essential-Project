@@ -50,7 +50,7 @@ const pageFR = `
 
 <main>
     <article id="gradient"> 
-    <h2 id="except"> Faisons plus ample connaissance <span>❤︎</span> </h2>
+    <h2 id="except"> Faisons plus ample connaissance <span>⚜️​</span> </h2>
 
     <div id="Introduction">
        <div class="container1"> <img id="ylang" src="images/ylang.webp" alt="corrumpted" width="700" height="500"></div>
@@ -94,14 +94,63 @@ const pageFR = `
 </div>
 
 <h2 class="space"> Un processus de fabrication millimétré </h2>
-        <div id="Maliketh">
-            <p> </p>
+        <!--partie du processus de fabrication-->
+<section class="timeline">
+    <div class="timeline-item left">
+        <div class="timeline-number">1</div>
+        <div class="timeline-content">
+            <h3>Récolte et sélection</h3>
+            <p>Les fleurs d’Ylang-Ylang sont soigneusement récoltées à la main à l’aube pour préserver toute leur fraîcheur et leur richesse aromatique.</p>
         </div>
+        <img class="steps" src="images/ylang1.webp" alt="ylang1">
+    </div>
+
+    <div class="timeline-item right">
+        <div class="timeline-number">2</div>
+        <div class="timeline-content">
+            <h3>Distillation traditionnelle</h3>
+            <p>Les fleurs sont distillées lentement à la vapeur selon un procédé ancestral, permettant d’extraire une essence pure et équilibrée.</p>
+        </div>
+         <img class="steps" src="images/ylang2.jpg" alt="ylang2">
+    </div>
+
+    <div class="timeline-item left">
+        <div class="timeline-number">3</div>
+        <div class="timeline-content">
+            <h3>Filtration et décantation</h3>
+            <p>L’huile obtenue est filtrée puis décantée naturellement afin de garantir une qualité optimale sans additif. Cela est sans risque pour l'environnement.</p>
+        </div>
+        <img class="steps" src="images/ylang3.jpg" alt="ylang3">
+    </div>
+
+    <div class="timeline-item right">
+        <div class="timeline-number">4</div>
+        <div class="timeline-content">
+            <h3>Mise en flacon</h3>
+            <p>L’essence finale est conditionnée avec soin dans des flacons respectueux de l'environnement, prête à accompagner vos rituels bien-être.</p>
+        </div>
+        <img class="steps" src="images/ylang4.jpeg" alt="ylang4">
+    </div>
+</section>
         
     </article>
 
 </main>
- <footer> © 2025 Sedana Essential — Tous droits réservés </footer>
+  <footer> © 2025 Sedana Essential — Tous droits réservés 
+    <div class="social-links">
+    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+        <img src="images/facebook.webp" alt="Facebook">
+    </a>
+
+    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+        <img src="images/instagram.webp" alt="Instagram">
+    </a>
+
+    <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+        <img src="images/linkedin.webp" alt="LinkedIn">
+    </a>
+</div>
+ </footer>
  <script src="JavaScript.js"></script>
 
 </body>
@@ -153,7 +202,7 @@ const pageEN = `
 <main>
 <article id="gradient">
 
-<h2 id="except"> Let’s Get to Know Each Other Better <span>❤︎</span> </h2>
+<h2 id="except"> Let’s Get to Know Each Other Better <span>⚜️​​</span> </h2>
 
 <div id="Introduction">
     <div class="container1">
@@ -212,14 +261,62 @@ const pageEN = `
 </div>
 
 <h2 class="space"> A Precision-Based Manufacturing Process </h2>
-<div id="Maliketh">
-    <p></p>
-</div>
+<!-- Manufacturing process section -->
+<section class="timeline">
+    <div class="timeline-item left">
+        <div class="timeline-number">1</div>
+        <div class="timeline-content">
+            <h3>Harvesting and Selection</h3>
+            <p>Ylang-ylang flowers are carefully handpicked at dawn to preserve their freshness and aromatic richness.</p>
+        </div>
+        <img class="steps" src="images/ylang1.webp" alt="ylang1">
+    </div>
 
+    <div class="timeline-item right">
+        <div class="timeline-number">2</div>
+        <div class="timeline-content">
+            <h3>Traditional Distillation</h3>
+            <p>The flowers are slowly steam-distilled using an ancestral method, ensuring the extraction of a pure and well-balanced essence.</p>
+        </div>
+        <img class="steps" src="images/ylang2.jpg" alt="ylang2">
+    </div>
+
+    <div class="timeline-item left">
+        <div class="timeline-number">3</div>
+        <div class="timeline-content">
+            <h3>Filtration and Decanting</h3>
+            <p>The extracted oil is filtered and naturally decanted to guarantee optimal quality without additives. This process is environmentally friendly.</p>
+        </div>
+        <img class="steps" src="images/ylang3.jpg" alt="ylang3">
+    </div>
+
+    <div class="timeline-item right">
+        <div class="timeline-number">4</div>
+        <div class="timeline-content">
+            <h3>Bottling</h3>
+            <p>The final essence is carefully bottled in eco-friendly containers, ready to accompany your well-being rituals.</p>
+        </div>
+        <img class="steps" src="images/ylang4.jpeg" alt="ylang4">
+    </div>
+</section>
 </article>
 </main>
 
-<footer> © 2025 Sedana Essential — All rights reserved </footer>
+<footer> © 2025 Sedana Essential — All rights reserved
+    <div class="social-links">
+    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+        <img src="images/facebook.webp" alt="Facebook">
+    </a>
+
+    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+        <img src="images/instagram.webp" alt="Instagram">
+    </a>
+
+    <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+        <img src="images/linkedin.webp" alt="LinkedIn">
+    </a>
+</div>
+</footer>
 <script src="JavaScript.js"></script>
 
 </body>
@@ -234,6 +331,8 @@ function switchLang() {
         document.body.innerHTML = pageFR;
         currentLang = "fr";
     }
+      // 🔥 Réactive le footer après traduction
+    initFooter();
 }
 
 
@@ -300,26 +399,30 @@ function resetAutoplay() {
     startAutoplay();
 }
 
-/*Footer*/
-const footer = document.querySelector("footer");
-let scrollTimeout;
+/* --- FOOTER DYNAMIQUE (corrigé) --- */
+function initFooter() {
+    const footer = document.querySelector("footer");
+    if (!footer) return;
 
-// Footer visible dès le chargement
-footer.style.bottom = "0";
+    let scrollTimeout;
 
-window.addEventListener("scroll", () => {
+    // footer visible au départ
+    footer.style.bottom = "0";
 
-    // Cache le footer pendant le scroll
-    footer.style.bottom = "-150px";
+    window.addEventListener("scroll", () => {
+        footer.style.bottom = "-150px";
 
-    clearTimeout(scrollTimeout);
+        clearTimeout(scrollTimeout);
 
-    // Quand on arrête de scroller → on le montre après un petit délai
-    scrollTimeout = setTimeout(() => {
-        footer.style.bottom = "0";
-    }, 150);
+        scrollTimeout = setTimeout(() => {
+            footer.style.bottom = "0";
+        }, 150);
+    });
+}
 
-});
+// On l’active au chargement initial
+initFooter();
+
 
 
 /* DAVID - page histoire */
@@ -341,6 +444,7 @@ function switchMode() {
         moon.classList.add("moon");
     }
 }
+
 
 
 
@@ -506,5 +610,6 @@ document.getElementById("btn-payer").addEventListener("click", () => {
 });
 
 /* FARES - page contact */
+
 
 
