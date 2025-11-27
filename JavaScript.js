@@ -545,12 +545,13 @@ Cbuttons.forEach(btn => {
     });
 });
 
-function showSlides(n) {
-    const slides = document.getElementsByClassName("mySlides");
-    const dots = document.getElementsByClassName("dot");
+// function showSlides(n) {
+//     const slides = document.getElementsByClassName("mySlides");
+//     const dots = document.getElementsByClassName("dot");
 
-    if (slides.length === 0) return; //si ya pas de slide
-}
+//     if (slides.length === 0) return; //si ya pas de slide
+// }
+
 // LOTS D’IMAGES
 const lotA = [
     "images/diffiuser.jpg",
@@ -610,6 +611,7 @@ document.getElementById("btn-payer").addEventListener("click", () => {
 });
 
 /* FARES - page contact */
+
 
 
 
