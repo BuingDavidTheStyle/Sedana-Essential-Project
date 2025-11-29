@@ -331,7 +331,7 @@ function switchLang() {
         document.body.innerHTML = pageFR;
         currentLang = "fr";
     }
-      // 🔥 Réactive le footer après traduction
+
     initFooter();
 }
 
@@ -443,6 +443,16 @@ function switchMode() {
         moon.classList.remove("sun");
         moon.classList.add("moon");
     }
+    /* Style mais non
+    const gradientSection = document.getElementById("gradient");
+
+    if (document.body.classList.contains("dark-mode")) {
+        gradientSection.style.backgroundImage = "url('images/ylangnoir.png')";
+    } else {
+        gradientSection.style.backgroundImage = "url('images/ylangblanc.png')";
+    }*/
+
+
 }
 
 
