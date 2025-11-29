@@ -377,7 +377,7 @@ body {
     }
 
 /* Chaque slide */
-.mySlides {
+/*.mySlides {
     position: absolute;
     width: 100%;
     left: 100%;            
@@ -385,14 +385,66 @@ body {
     transition: all 0.8s ease-in-out;
     display: flex;             
     align-items: center;       
-    justify-content: space-between; 
-    
+    justify-content: space-between;
+
+}*/
+/* Ajoute un arrière-plan à chaque slide */
+/* Container du slider */
+.slideshow-container {
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    aspect-ratio: 16/9.6;
+    border-radius: 150px;
+    border: solid 1px rgb(0, 0, 0);
+    filter: drop-shadow(0 0 10px rgb(255, 194, 141));
 }
 
+/* Background global derrière toutes les slides */
+.slideshow-container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/ylangblanc.png'); /* ton image de fond */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; /* toujours derrière les slides */
+    border-radius: 150px;
+    filter: brightness(0.85); /* optionnel, pour assombrir légèrement */
+}
+.dark-mode .slideshow-container::before {
+    background-image: url('images/ylangnoir.png'); /* fond sombre */
+}
+
+/* Chaque slide */
+.mySlides {
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1; /* au-dessus du background */
+}
+
+/* Images et textes au-dessus */
+.mySlides img, .mySlides .descript2, .mySlides .descript3 {
+    position: relative;
+    z-index: 2;
+}
+
+/* Slide active */
 .mySlides.active {
     left: 0;
     opacity: 1;
 }
+
 
 .mySlides.hide-left {
     left: -100%;
@@ -608,7 +660,362 @@ footer {
 
 /* DAVID - page histoire */
 
-/* Nouveau look du bouton, sans changer ton HTML */
+
+
+
+img#ylang-valeurs {
+    width: 400px;
+    height: 400px;
+}
+
+
+img#ylang-valeurs {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 20px rgb(255, 255, 255));
+    opacity: 0;
+    transform: scale(0.9);
+    animation: apparition 1.5s ease-out forwards;
+    flex-shrink: 0;
+}
+
+
+
+
+.bienfaits-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 100px auto;
+    padding: 50px;
+    max-width: 90%;
+}
+
+.valeurs-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 100px auto;
+    padding: 50px;
+    max-width: 90%;
+}
+
+
+
+/* Nouvelle image pour les bienfaits */
+img#ylang-bienfaits {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 20px rgb(255, 255, 255));
+    opacity: 0;
+    transform: scale(0.9);
+    animation: apparition 1.5s ease-out forwards;
+    flex-shrink: 0;
+}
+
+/* Titre aligné avec l'image */
+.bienfaits-section h1 {
+    font-size: 170px;
+    font-family: "MonteCarlo", cursive;
+    margin: 0;
+    color: inherit;
+    text-align: center;
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255))
+    drop-shadow(0 0 10px rgb(255, 255, 255));
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 1200px) {
+    .bienfaits-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    img#ylang-bienfaits {
+        width: 400px;
+        height: 400px;
+    }
+
+    .bienfaits-section h1 {
+        font-size: 100px;
+    }
+}
+
+.histoire-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 50px auto;
+    padding: 50px;
+    max-width: 90%;
+}
+
+/* Image pour Notre Histoire */
+img#histoire-image {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 20px rgb(255, 255, 255))
+    drop-shadow(0 0 20px rgb(255, 166, 0));
+    opacity: 0;
+    transform: scale(0.9);
+    animation: apparition 1.5s ease-out forwards;
+    flex-shrink: 0;
+}
+
+/* Titre Notre Histoire dans la section */
+.histoire-section h2#except {
+    font-size: 300px;
+    font-family: "Shantell Sans", cursive;
+    margin: 0;
+    text-align: center;
+    filter: drop-shadow(0 0 5px rgb(255, 255, 255))
+    drop-shadow(0 0 5px rgb(255, 166, 0));
+}
+
+.histoire-section h2#except > span {
+    font-size: 110px;
+    height: 90px;
+    width: 90px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 1200px) {
+    .histoire-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    img#histoire-image {
+        width: 350px;
+        height: 350px;
+    }
+
+    .histoire-section h2#except {
+        font-size: 60px;
+    }
+
+    .histoire-section h2#except > span {
+        font-size: 70px;
+    }
+}
+
+/* Grille des 4 bienfaits */
+.bienfaits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    max-width: 85%;
+    margin: 80px auto;
+    padding: 40px;
+}
+
+/* Carte individuelle */
+.bienfait-card {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 40px;
+    padding: 40px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(255, 194, 141, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.bienfait-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(255, 194, 141, 0.8);
+}
+
+/* Image dans la carte */
+.bienfait-card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+    border: 3px solid rgba(255, 194, 141, 0.6);
+    filter: drop-shadow(0 0 10px rgba(255, 194, 141, 0.5));
+}
+
+/* Titre de la carte */
+.bienfait-card h3 {
+    font-size: 125px;
+    font-family: "Shantell Sans", cursive;
+    color: #000;
+    margin: 20px 0;
+}
+
+/* Paragraphe de la carte */
+.bienfait-card p {
+    font-size: 100px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    text-align-last: center;
+}
+
+/* Mode sombre */
+body.dark-mode .bienfait-card {
+    background: rgba(0, 0, 0, 0.65);
+    border-color: rgba(255, 194, 141, 0.3);
+}
+
+body.dark-mode .bienfait-card h3,
+body.dark-mode .bienfait-card p {
+    color: #fff;
+}
+
+/* Responsive - 1 colonne sur petits écrans */
+@media (max-width: 1024px) {
+    .bienfaits-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .bienfait-card img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .bienfait-card h3 {
+        font-size: 45px;
+    }
+
+    .bienfait-card p {
+        font-size: 32px;
+    }
+}
+
+.descript2 {
+    width: 35%;
+    font-size: 65px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: inherit;
+    text-align: center;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    text-align-last: center;
+    margin: 0 auto;
+    line-height: 2.5;
+    padding-top: 0px;
+    margin-bottom: 1000px;"
+    padding-left: 0px;
+    margin-left: auto;
+    margin-right: 150px;"
+}
+
+.descript3 {
+    width: 35%;
+    font-size: 65px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: inherit;
+    text-align: center;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    text-align-last: center;
+    margin: 0;
+    margin-left: 555px;
+    margin-right: auto;
+    line-height: 2.5;
+    padding-top: 0px;
+    margin-bottom: 1000px;
+}
+
+.slide-box {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.65);
+    padding: 40px 50px;
+    border-radius: 40px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    max-width: 900px;
+    color: #000;
+    font-size: 45px;
+    line-height: 1.6;
+    text-align: justify;
+    z-index: 10;
+}
+
+.slide-box h3 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+
+.slide-box h3 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+/* v1 Prototype*/
+/*.text-box {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px 50px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 40px;
+    backdrop-filter: blur(5px);
+    font-size: 50px;
+    line-height: 1.6;
+    color: #000;
+    text-align: justify;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}*/
+/* v2 en rapport avec tropicale ylang ylang*/
+.text-box {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px 50px;
+    border-radius: 40px;
+    font-size: 50px;
+    line-height: 1.6;
+    color: #003300;
+    text-align: justify;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(123, 200, 137, 0.7);
+
+    /* Gradient tropical */
+    background: linear-gradient(
+            135deg,
+            rgba(248, 186, 0, 0.6),
+            rgba(123, 200, 137, 0.5),
+            rgba(255, 174, 0, 0.5)
+    );
+
+    /* Ombre lumineuse */
+    box-shadow: 0 0 25px rgba(123, 200, 137, 0.5);
+
+    /* Animation */
+    animation: breathe 6s ease-in-out infinite alternate;
+}
+
+
+
+#text {
+    font-size: 60px;
+    max-width: 1500px;
+    line-height: 1.5;
+    margin: 50px auto;
+    text-align: justify;
+}
+/* Nouveau look du bouton, sans changer ton HTML -Mohammad ISADJEE  */
 .night-toggle {
     position: absolute;
     right: 400px;
