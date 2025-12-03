@@ -40,12 +40,12 @@
 
     <div class="lang-toggle" onclick="switchLang()">🇫🇷 / 🇬🇧</div>
 
-    <img id="logo" src="images/logo.png">
+
       
 </header>
 
 <div class="centre">
-    <a href="accueil.html">
+    <a href="accueil.html" >
         <img class="logoC" src="images/logo.png" alt="logo">
     </a>
 </div>
@@ -122,8 +122,8 @@
     <article id="pastrans2">
 
             <div class="CsliderA-buttons">
-                <button id="lotA">Lot A</button>
-                <button id="lotB">Lot B</button>
+                <button id="lotA">image produits</button>
+                <button id="lotB">image ateliers</button>
             </div>
 
             <div class="CsliderA-container">
@@ -151,6 +151,7 @@
                 <p style="text-align:center; color:gray;">
                     Sélectionnez une catégorie pour afficher les produits
                 </p>
+
             </section>
 
         </article>
@@ -172,8 +173,25 @@
     </a>
 </div>
  </footer>
+<!-- POPUP PRODUIT -->
+<div id="Cpopup" class="hidden">
+    <div id="Cpopup-content">
+        <span id="Cclose">&times;</span>
+
+        <img id="Cpopup-img" src="">
+        <h2 id="Cpopup-nom"></h2>
+        <p id="Cpopup-desc"></p>
+        <p id="Cpopup-prix"></p>
+
+        <button id="Cadd-panier">Ajouter au panier</button>
+    </div>
+</div>
 </body>
+<script src="JavaScript.js" defer></script>
 </html>
+
+
+
 
 
 
