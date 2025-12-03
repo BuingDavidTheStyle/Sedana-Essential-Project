@@ -459,8 +459,6 @@ function switchMode() {
 
 
 
-
-
 /* CLEMENT - page produits */
 
 //slide pour ateliers
@@ -493,30 +491,30 @@ setInterval(nextCslide, 5000); //en ms
 // Listes des produits par catégorie
 const CcatalogueProduits = {
     bougies: [
-        { img: "images/bougie1.jpg", desc: "Aromatherapy Candle Workshop – Featuring Ylang Ylang\n" },
-        { img: "images/bougie2.jpg", desc: "Bougie coco sauvage" },
-        { img: "images/bougie3.jpg", desc: "Bougie coco sauvage" },
-        { img: "images/bougie4.jpg", desc: "Bougie coco sauvage" },
-        { img: "images/candlejar.png", desc: "Bougie fleur de coton" }
+        { img: "images/bougie1.jpg", desc: "Aromatherapy Candle Workshop – Featuring Ylang Ylang,\n",nom: "Bougie Aromathérapie" },
+        { img: "images/bougie2.jpg", desc: "Bougie coco sauvage" , prix: 10 ,nom: "Bougie Coco" },
+        { img: "images/bougie3.jpg", desc: "Bougie coco sauvage" , prix: 10 ,nom: "Bougie Coco" },
+        { img: "images/bougie4.jpg", desc: "Bougie coco sauvage" , prix: 10 ,nom: "Bougie Coco" },
+        { img: "images/candlejar.png", desc: "Bougie fleur de coton" , prix: 10 ,nom: "Bougie Coco" }
     ],
 
     sel_de_bain: [
-        { img: "images/bath_salt.png", desc: "Fondant floral" }
+        { img: "images/bath_salt.png", desc: "Fondant floral" , prix: 10 ,nom: "Bougie Coco" }
     ],
 
     diffuseurs: [
-        { img: "images/diffiuser.jpg", desc: "Diffuseur bâtonnets" },
-        { img: "images/diffuseur2.jpg", desc: "Diffuseur zen" }
+        { img: "images/diffiuser.jpg", desc: "Diffuseur bâtonnets" , prix: 10 ,nom: "Bougie Coco" },
+        { img: "images/diffuseur2.jpg", desc: "Diffuseur zen", prix: 10 ,nom: "Bougie Coco" }
 
     ],
 
     huile_essentiels: [
-        { img: "images/essentialOil.jpg", desc: "Brume apaisante" },
+        { img: "images/essentialOil.jpg", desc: "Brume apaisante" , prix: 10 ,nom: "Bougie Coco" },
     ],
 
     pots: [
-        { img: "images/pot1.jpg", desc: "Pot-pourri floral" },
-        { img: "images/pot2.jpg", desc: "Pot-pourri eucalyptus" }
+        { img: "images/pot1.jpg", desc: "Pot-pourri floral" , prix: 10 ,nom: "Bougie Coco" },
+        { img: "images/pot2.jpg", desc: "Pot-pourri eucalyptus" , prix: 10 ,nom: "Bougie Coco" }
     ]
 };
 
@@ -541,28 +539,50 @@ Cbuttons.forEach(btn => {
 
         produits.forEach(p => {
             html += `
-                <div class="Cproduit">
-                    <img src="${p.img}">
-                    <p>${p.desc}</p>
-                </div>
-            `;
+        <div class="Cproduit">
+            <img class="Cprod-img"
+                 src="${p.img}"
+                 data-nom="${p.nom}"
+                 data-desc="${p.desc}"
+                 data-prix="${p.prix}">
+            <p class="Ctitre">${p.nom}</p>
+            <p class="Cdesc">${p.desc}</p>
+        </div>
+    `;
         });
+
 
         html += `</div>`;
 
         // Injection dans la zone
         Czone.innerHTML = html;
+        document.addEventListener("click", e => {
+            if (e.target.classList.contains("Cprod-img")) {
+                const img = e.target;
+                const produit = {
+                    img: img.src,
+                    nom: img.dataset.nom,
+                    desc: img.dataset.desc,
+                    prix: img.dataset.prix
+                };
+                openCpopup(produit);
+            }
+        });
+
+
     });
 });
 
-// function showSlides(n) {
-//     const slides = document.getElementsByClassName("mySlides");
-//     const dots = document.getElementsByClassName("dot");
-
+// function CshowSlides(n) {
+//     const slides = document.getElementsByClassName("CmySlides");
+//     const dots = document.getElementsByClassName("Cdot");
+//
 //     if (slides.length === 0) return; //si ya pas de slide
 // }
-
 // LOTS D’IMAGES
+/* LOTS D’IMAGES */
+
+/* --- Définition des lots --- */
 const lotA = [
     "images/diffiuser.jpg",
     "images/candlejar.png",
@@ -575,28 +595,24 @@ const lotB = [
     "images/bougie3.jpg"
 ];
 
-// Fonction pour injecter les images + duplicatas pour defilement infini
+/* --- Injecter les images dans la bande défilante --- */
 function loadImages(images) {
     const track = document.getElementById("CsliderTrack");
     track.innerHTML = ""; // Reset
 
     // Lot original
-    images.forEach(src => {
-        createSlide(src, track);
-    });
+    images.forEach(src => createSlide(src, track));
 
     // Duplicata pour boucle infinie
-    images.forEach(src => {
-        createSlide(src, track);
-    });
+    images.forEach(src => createSlide(src, track));
 
-    // Reset l’animation pour la relancer proprement
+    // Reset animation pour re-lancer proprement
     track.style.animation = "none";
     void track.offsetWidth;
     track.style.animation = "";
 }
 
-// création d’un slide
+/* --- Création d’un slide --- */
 function createSlide(src, container) {
     const div = document.createElement("div");
     div.className = "CsliderA-slide";
@@ -608,19 +624,128 @@ function createSlide(src, container) {
     container.appendChild(div);
 }
 
-// Boutons
+/* --- Boutons A & B --- */
 document.getElementById("lotA").addEventListener("click", () => loadImages(lotA));
 document.getElementById("lotB").addEventListener("click", () => loadImages(lotB));
 
 // Charger Lot A par défaut
 loadImages(lotA);
 
-//paiment
+/* ---------------------------
+        SECTION PAIEMENT
+---------------------------- */
+
 document.getElementById("btn-payer").addEventListener("click", () => {
     document.getElementById("formulaire-paiement").classList.remove("hidden");
 });
 
+/* ---------------------------
+        POPUP + PANIER
+---------------------------- */
+
+// Variables popup
+let panier = [];
+let produitActuel = null;
+
+// Sélecteurs popup
+const Cpopup = document.getElementById("Cpopup");
+const CpopupImg = document.getElementById("Cpopup-img");
+const CpopupNom = document.getElementById("Cpopup-nom");
+const CpopupDesc = document.getElementById("Cpopup-desc");
+const CpopupPrix = document.getElementById("Cpopup-prix");
+const CaddPanier = document.getElementById("Cadd-panier");
+const Cclose = document.getElementById("Cclose");
+
+// --- OUVERTURE POPUP ---
+function openCpopup(produit) {
+    produitActuel = produit;
+
+    CpopupImg.src = produit.img;
+    CpopupNom.textContent = produit.nom;
+    CpopupDesc.textContent = produit.desc;
+    CpopupPrix.textContent = produit.prix + " €";
+
+    Cpopup.classList.remove("hidden");
+}
+
+// --- FERMETURE POPUP ---
+Cclose.addEventListener("click", () => {
+    Cpopup.classList.add("hidden");
+});
+Cpopup.addEventListener("click", (e) => {
+    if (e.target === Cpopup) Cpopup.classList.add("hidden");
+});
+
+// --- AJOUT AU PANIER ---
+CaddPanier.onclick = () => {
+    panier.push(produitActuel);
+    updatePanier();
+    Cpopup.classList.add("hidden");
+};
+
+// --- Mise à jour du panier ---
+function updatePanier() {
+    const info = document.getElementById("panier-info");
+
+    info.innerHTML = `<strong>${panier.length} article(s) :</strong><br><br>`;
+
+    panier.forEach((p, index) => {
+        info.innerHTML += `
+            <div style="margin-bottom:10px; display:flex; align-items:center; gap:10px;">
+                <img src="${p.img}" style="width:50px; height:50px; object-fit:cover; border-radius:8px;">
+                <span>${p.nom} - ${p.prix} €</span>
+                <button class="Cremove-btn" data-index="${index}"
+                    style="margin-left:auto; background:red; border:none; color:white; border-radius:6px; padding:4px 8px; cursor:pointer;">
+                    ❌
+                </button>
+            </div>
+        `;
+    });
+
+    document.querySelectorAll(".Cremove-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            panier.splice(btn.dataset.index, 1);
+            updatePanier();
+        });
+    });
+}
+function activateCataloguePopups() {
+    document.querySelectorAll(".Cprod-img").forEach(img => {
+        img.addEventListener("click", () => {
+            const produit = {
+                img: img.src,
+                nom: img.dataset.nom,
+                desc: img.dataset.desc,
+                prix: img.dataset.prix
+            };
+            openCpopup(produit);
+        });
+    });
+}
+activateCataloguePopups();
+/* ---------------------------
+    RENDRE LES IMAGES CLIQUABLES
+---------------------------- */
+
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("Cprod-img")) {
+
+        const img = e.target;
+
+        const produit = {
+            img: img.src,
+            nom: img.dataset.nom,
+            desc: img.dataset.desc,
+            prix: img.dataset.prix
+        };
+
+        openCpopup(produit);
+    }
+});
+
+
 /* FARES - page contact */
+
 
 
 
