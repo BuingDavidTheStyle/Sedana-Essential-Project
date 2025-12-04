@@ -2,13 +2,66 @@
 <!doctype html>
 <html>
 <head>
-    <title>Site Heberger par github</title>
+    <title>Site Hébergé par GitHub</title>
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            /*background-image: url("images/jour.jpg");*/
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            text-align: center;
+        }
+
+
+        .navbar p {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+
+        .navbar a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #206729;
+            color: white;
+            padding: 15px 40px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+
+        .navbar a:hover {
+            background-color: #3f8d2d;
+        }
+
+        .center-img {
+            display: block;
+            margin: 0 auto 30px auto;
+            max-width: 300px;
+            width: 100%;
+        }
+    </style>
+<h1>Sedana Essential</h1>
 </head>
 <body>
+
+<img src="images/Lucid_Origin_A_elegant_welcome_logo_featuring_ylang_ylang_with_3.png" alt="Image" class="center-img">
 <nav class="navbar">
     <ul>
-        <p>Cliquez "Start" Pour commencer </p>
-        <li><a href="accueil.html">Start</a></li>
+        <a href="accueil.html">Start</a>
     </ul>
 </nav>
 </body>
