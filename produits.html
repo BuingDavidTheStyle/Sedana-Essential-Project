@@ -5,17 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="JavaScript.js" defer></script>
+    <script src="traduction.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Produits</title>
-    <style>
-      /* Forcer la même modale de login que l'accueil sur cette page */
-      #D.float { width: min(98vw, 1600px) !important; height: auto !important; border: 0 !important; background: #fff !important; border-radius: 28px !important; padding: clamp(2.5rem, 5vw, 6rem) !important; }
-      #D.float #je_suis_differents { font-size: clamp(3rem, 7vw, 5rem) !important; }
-      #D.float .txt_field input { height: clamp(90px, 14vh, 140px) !important; font-size: clamp(1.8rem, 3.6vw, 2.6rem) !important; }
-      #D.float .txt_field label { font-size: clamp(1.4rem, 2.8vw, 2rem) !important; }
-      #D.float input[type="submit"] { height: clamp(100px, 16vh, 160px) !important; font-size: clamp(1.9rem, 4vw, 2.6rem) !important; border-radius: 18px !important; }
-      #D.float .users_signup a { font-size: clamp(1.6rem, 3.2vw, 2.2rem) !important; font-weight: 800 !important; }
-    </style>
 </head>
 
 
@@ -43,14 +35,16 @@
     </div>
      <div class="test">
         <div class="test_content">
-     <span>Contactez-nous au <b>+ 44 73.42.36.85.84</b></span>
+     <span data-key="ContactNous">Contactez-nous au <b>+ 44 73.42.36.85.84</b></span>
        </div>
     </div>
 
-    <div class="lang-toggle" onclick="switchLang()">🇫🇷 / 🇬🇧</div>
+    <div class="lang-toggle" onclick="toggleLangC()">🇫🇷 / 🇬🇧</div>
 
 
-      
+
+
+
 </header>
 
 <div class="centre">
@@ -62,11 +56,11 @@
      <nav>
 
         <ul class="navbar">
-            <li class="navbar_item"><a class="navbar_link" href="accueil.html">
-                <span class="material-icons">Accueil</span></a></li>
-            <li class="navbar_item"><a class="navbar_link" href="histoire.html">Histoire</a></li>
-            <li class="navbar_item"><a class="navbar_link" href="produits.html"><span class="material-icons">Produits</span></a></li>
-            <li class="navbar_item"><a class="navbar_link" href="contact.html">Contact</a></li>
+            <li  class="navbar_item"><a class="navbar_link" href="accueil.html">
+                <span class="material-icons"><p data-key="Accueil" class="p2">Accueil</p></span></a></li>
+            <li  class="navbar_item"><a class="navbar_link" href="histoire.html"><p data-key="Histoire" class="p2">Histoire</p></a></li>
+            <li  class="navbar_item"><a class="navbar_link" href="produits.html"><span class="material-icons"><p data-key="Produits" class="p2">Produits</p></span></a></li>
+            <li  class="navbar_item"><a class="navbar_link" href="contact.html"><p data-key="Contact" class="p2">Contact</p></a></li>
         </ul>
 
      </nav>
@@ -77,7 +71,7 @@
          <a href="contact.html">
             <img class="float" src="images/formulaire-removebg-preview.png">
          </a>
-         <p class="C"><--  appuyer ici pour être dirigé vers le formulelaire de participation aux ateliers</p>
+         <p data-key="lienFormulaire" class="C"><--  appuyer ici pour être dirigé vers le formulelaire de participation aux ateliers</p>
 
          <!-- slides ateliers -->
          <div class="Cslider">
@@ -99,11 +93,11 @@
 
                  <!-- SECTION PANIER -->
                  <div class="Csection" id="section-panier">
-                     <h2 class="Ctitle">panier</h2>
+                     <h2 data-key="Panier" class="Ctitle">panier</h2>
 
-                     <p id="panier-info">panier vide ou X article dans votre panier</p>
+                     <p data-key="PanierVide" id="panier-info">panier vide ou X article dans votre panier</p>
 
-                     <button id="btn-payer">Commander et payer</button>
+                     <button data-key="BoutonCommander" id="btn-payer">Commander et payer</button>
                  </div>
 
                  <!-- DIVISEUR -->
@@ -111,16 +105,16 @@
 
                  <!-- SECTION PAIEMENT -->
                  <div class="Csection" id="section-paiement">
-                     <h2 class="title">section paiement en ligne</h2>
+                     <h2 data-key="SectionPaiement" class="title">section paiement en ligne</h2>
 
                      <div id="formulaire-paiement" class="hidden">
-                         <p>num carte bancaire :</p>
+                         <p data-key="NumCarte" >num carte bancaire :</p>
                          <input type="text" placeholder="XXXX XXXX XXXX XXXX">
 
-                         <p>num tél :</p>
+                         <p data-key="NumTel">numéro téléphone :</p>
                          <input type="text" placeholder="06 XX XX XX XX">
 
-                         <button>Payer maintenant</button>
+                         <button data-key="BoutonPayer" >Payer maintenant</button>
                      </div>
                  </div>
 
@@ -131,8 +125,8 @@
     <article id="pastrans2">
 
             <div class="CsliderA-buttons">
-                <button id="lotA">image produits</button>
-                <button id="lotB">image ateliers</button>
+                <button data-key="BoutonImageProduit" id="lotA">image produits</button>
+                <button data-key="BoutonImageAtelier" id="lotB">image ateliers</button>
             </div>
 
             <div class="CsliderA-container">
@@ -148,16 +142,16 @@
 
             <!-- BOUTONS CATEGORIES -->
             <div class="Ccategories">
-                <button class="Ccat-btn" data-cat="bougies">Bougies</button>
-                <button class="Ccat-btn" data-cat="sel_de_bain">Fondants parfumés</button>
-                <button class="Ccat-btn" data-cat="diffuseurs">Diffuseurs</button>
-                <button class="Ccat-btn" data-cat="huile_essentiels">Brumes d'oreiller</button>
-                <button class="Ccat-btn" data-cat="pots">Pots-pourris</button>
+                <button data-key="BoutonBougies" class="Ccat-btn" data-cat="bougies">Bougies</button>
+                <button data-key="BoutonFondants" class="Ccat-btn" data-cat="sel_de_bain">Fondants parfumés</button>
+                <button data-key="BoutonDifuseur" class="Ccat-btn" data-cat="diffuseurs">Diffuseurs</button>
+                <button data-key="BoutonBrumes" class="Ccat-btn" data-cat="huile_essentiels">Brumes d'oreiller</button>
+                <button data-key="BoutonPots" class="Ccat-btn" data-cat="pots">Pots-pourris</button>
             </div>
 
             <!-- SECTION QUI CHANGE -->
             <section id="Cproduits-zone">
-                <p style="text-align:center; color:gray;">
+                <p data-key="SelectionBouton" style="text-align:center; color:gray;">
                     Sélectionnez une catégorie pour afficher les produits
                 </p>
 
@@ -167,38 +161,48 @@
 
 
      </main>
- <footer> © 2025 Sedana Essential — Tous droits réservés 
+
+<footer class="testC">
+    <img id="floatC" class="logoC" src="images/logo.png" alt="logo">
+    <p data-key="Droit" class="p"> © 2025 Sedana Essential — Tous droits réservés</p>
+    <p data-key="Partenaire" class="p">Partenaire : Naraction</p>
+
     <div class="social-links">
-    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-        <img src="images/facebook.webp" alt="Facebook">
-    </a>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <img src="images/facebook.webp" alt="Facebook">
+            </a>
 
-    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-        <img src="images/instagram.webp" alt="Instagram">
-    </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <img src="images/instagram.webp" alt="Instagram">
+            </a>
 
-    <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
-        <img src="images/linkedin.webp" alt="LinkedIn">
-    </a>
-</div>
- </footer>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.webp" alt="LinkedIn">
+            </a>
+    </div>
+
+</footer>
 <!-- POPUP PRODUIT -->
 <div id="Cpopup" class="hidden">
     <div id="Cpopup-content">
         <span id="Cclose">&times;</span>
 
         <img id="Cpopup-img" src="">
+
+        <!-- Texte dynamique (pas de data-key) -->
         <h2 id="Cpopup-nom"></h2>
         <p id="Cpopup-desc"></p>
         <p id="Cpopup-prix"></p>
 
-        <button id="Cadd-panier">Ajouter au panier</button>
+        <!-- Texte FIXE à traduire -->
+        <button id="Cadd-panier" data-key="btn_add_cart"></button>
+
     </div>
 </div>
+
 </body>
 <script src="JavaScript.js" defer></script>
 </html>
-
 
 
 
