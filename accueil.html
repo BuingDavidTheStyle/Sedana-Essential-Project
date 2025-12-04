@@ -40,10 +40,11 @@
     </div>
      <div class="test">
         <div class="test_content">
-     <span>Contactez-nous au <b>+ 44 73.42.36.85.84</b></span>
+            <span data-key="ContactNous">Contactez-nous au <b>+ 44 73.42.36.85.84</b></span>
        </div>
     </div>
 
+    <div class="lang-toggle" onclick="toggleLangC()">🇫🇷 / 🇬🇧</div>
 
     <!-- Raccourci Vers le menu accueil -->
     <a href="accueil.html" aria-label="Accueil">
@@ -100,7 +101,7 @@
 
 <main>
     <article id="gradient"> 
-    <h2 id="except"> Faisons plus ample connaissance <span>⚜️​</span> </h2>
+    <h2 data-key="ConnaissanceAccueil" id="except"> Faisons plus ample connaissance <span>⚜️​</span> </h2>
 
     <div id="Introduction">
        <div class="container1"> <img id="ylang" src="images/ylang.webp" alt="corrumpted" width="700" height="500"></div>
@@ -190,21 +191,31 @@
 
 
 </main>
- <footer> © 2025 Sedana Essential — Tous droits réservés 
+<footer class="testC">
+    <img id="floatC" class="logoC" src="images/logo.png" alt="logo">
+    <p data-key="Droit" class="p"> © 2025 Sedana Essential — Tous droits réservés</p>
+
+    <div class="partner-container">
+        <a href="https://www.naraction.fr/" target="_blank" class="partner-link">
+            <img src="images/association-naraction-1-Aq2JVXLg4VU2P76Z.avif" alt="Logo Partenaire Naraction" class="partner-logo">
+        </a>
+        <p data-key="Partenaire" class="p partner-text">Partenaire : Naraction</p>
+    </div>
     <div class="social-links">
-    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-        <img src="images/facebook.webp" alt="Facebook">
-    </a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+            <img src="images/facebook.webp" alt="Facebook">
+        </a>
 
-    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-        <img src="images/instagram.webp" alt="Instagram">
-    </a>
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+            <img src="images/instagram.webp" alt="Instagram">
+        </a>
 
-    <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
-        <img src="images/linkedin.webp" alt="LinkedIn">
-    </a>
-</div>
- </footer>
+        <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.webp" alt="LinkedIn">
+        </a>
+    </div>
+
+</footer>
  <script src="JavaScript.js"></script>
 
 </body>
