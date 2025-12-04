@@ -630,18 +630,68 @@ h3{
 
 
 
-.social-links img {
-    width: 90px;
-    height: 90px;
-    cursor: pointer;
-    border-radius: 50%;
-}
+/*.social-links img {*/
+/*    width: 350px;*/
+/*    height: 350px;*/
+/*    cursor: pointer;*/
+/*    border-radius: 50%;*/
+/*}*/
 
 .social-links img:hover {
     transform: scale(1.15);
 }
 
 /* DAVID - page histoire */
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links img {
+    width: 350px; /* Taille des icônes (ajustez selon votre besoin) */
+    height: 350px;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+main, article {
+    flex-grow: 1; /* etendre et de pousser le footer */
+}
+
+
+.testC {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    padding: 30px 0;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.partner-container {
+    display: flex;
+    align-items: center;
+    /* ... autres styles */
+}
 
 
 .login-btn {
@@ -1867,7 +1917,7 @@ p.p2 {
 }
 footer.testC {
     width: 100%;
-    height: 600px;
+    /*height: 600px;*/
     background-color: #000;
     bottom: 0;
     left: 0;
