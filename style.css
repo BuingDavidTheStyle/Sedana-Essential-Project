@@ -627,24 +627,7 @@ h3{
 }
 
 /*footer*/
-footer {
-    display: flex;
-    justify-content: space-between;
-     position: fixed;
-    bottom: -120px;   
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.699);
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 38px;
-    justify-content: center;
-    align-items: center;
-    transition: bottom 0.4s ease;
-    gap: 30px;
-    bottom: 0;
-}
+
 
 
 .social-links img {
@@ -1366,6 +1349,7 @@ a[aria-label="Accueil"]{
     width: fit-content;
     margin : 0 auto;
 }
+
 /* CLEMENT - page produits */
 /* Pepito - page produit */
 /* Container pour slide auto */
@@ -1666,16 +1650,23 @@ img.float {
 }
 
 .Cproduit {
-    width: 280px;
+    width: 600px;
     text-align: center;
 }
+
+.Cproduit p {
+    font-size: 70px;      /* augmente ici */
+    margin-top: 10px;
+    line-height: 1.3;
+}
+
 .Cproduit img,
 .Cprod-img {
     cursor: pointer;
     pointer-events: auto;
 
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
     object-fit: cover;
 
     border: 2px solid #aaa;
@@ -1774,8 +1765,8 @@ img.float {
 
 #btn-payer {
     margin-top: 40px;
-    padding: 12px 25px;
-    font-size: 16px;
+    padding: 100px 200px;
+    font-size: 100px;
     border-radius: 8px;
     border: none;
     background: #000;
@@ -1796,7 +1787,8 @@ img.float {
 }
 
 #formulaire-paiement button {
-    padding: 12px 25px;
+    padding: 100px 200px;
+    font-size: 100px;
     background: #333;
     border: none;
     color: white;
@@ -1844,7 +1836,15 @@ img.float {
     font-size: 28px;
     cursor: pointer;
 }
-
+#Cpopup-nom {
+    font-size: 100px;
+}
+#Cpopup-desc {
+    font-size: 100px;
+}
+Cpopup-prix {
+    font-size: 100px;
+}
 #Cadd-panier {
     margin-top: 15px;
     padding: 10px 20px;
@@ -1854,11 +1854,348 @@ img.float {
     border-radius: 8px;
     cursor: pointer;
 }
+p.p {
+    align-items: center;
+    margin-left: 50px;
+    color: #f0f0f0;
+    font-size: 100px;
+}
+p.p2 {
+    align-items: center;
+    margin-left: 5px;
+    font-size: 50px;
+}
+footer.testC {
+    width: 100%;
+    height: 600px;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
 
+}
 
+#floatC {
+    float: right;
+}
 
 
 /* FARES - page contact */
+
+ #D.float {
+     width: min(98vw, 1600px) !important;
+     height: auto !important;
+     border: 0 !important;
+     background: #fff !important;
+     border-radius: 28px !important;
+     padding: clamp(2.5rem, 5vw, 6rem) !important;
+ }
+
+#D.float #je_suis_differents { font-size: clamp(3rem, 7vw, 5rem) !important; }
+#D.float .txt_field input { height: clamp(90px, 14vh, 140px) !important; font-size: clamp(1.8rem, 3.6vw, 2.6rem) !important; }
+#D.float .txt_field label { font-size: clamp(1.4rem, 2.8vw, 2rem) !important; }
+#D.float input[type="submit"] { height: clamp(100px, 16vh, 160px) !important; font-size: clamp(1.9rem, 4vw, 2.6rem) !important; border-radius: 18px !important; }
+#D.float .users_signup a { font-size: clamp(1.6rem, 3.2vw, 2.2rem) !important; font-weight: 800 !important; }
+
+/* Style de l'article container */
+#fonctat {
+    margin: 40px auto;
+    padding: 0;
+    border: 2px solid #000000;
+    border-radius: 80px;
+    width: 95%;
+    max-width: 2000px !important ;
+    background: linear-gradient(
+            215deg,
+            rgba(185, 182, 182, 0.842),
+            rgba(248, 186, 0, 0.651),
+            rgba(123, 200, 137, 0.753),
+            rgba(163, 163, 163, 0.842)
+    );
+    transition: all 0.3s ease;
+}
+
+/* Mode nuit pour l'article */
+body.dark-mode #fonctat {
+    background: linear-gradient(
+            215deg,
+            rgba(50, 50, 50, 0.9),
+            rgba(80, 60, 0, 0.8),
+            rgba(40, 80, 50, 0.85),
+            rgba(60, 60, 60, 0.9)
+    );
+    border-color: #555;
+}
+
+/* Styles du formulaire de contact */
+#test2 {
+
+    padding: 200px;
+    background-image: url('images/ylangblanc.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 70px;
+
+    width: 100%;
+    max-width: 3000px ;
+    margin: 60px auto;
+
+
+    font-size: 2.6rem ;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+#test2 label {
+    font-size: clamp(2.4rem, 4vw, 3rem) !important;
+    font-weight: 700;
+}
+
+#test2 input[type="text"],
+#test2 input[type="email"],
+#test2 input[type="tel"],
+#test2 select {
+    font-size: 2.6rem !important;
+    height: 150px !important;     /* Plus grand */
+    padding-left: 40px !important;
+}
+
+#test2 textarea {
+    font-size: 2.6rem !important;
+    min-height: 450px !important; /* Plus haut */
+    padding: 40px !important;
+}
+
+#test2 i {
+    font-size: clamp(2.4rem, 4vw, 3rem) !important;
+    top: 40px !important;
+    padding-left: 15px !important;
+}
+
+#test2 .pied-formulaire button {
+    font-size: clamp(2.6rem, 4vw, 3rem) !important;
+    padding: 30px 80px !important;
+    border-radius: 20px;
+}
+
+
+/* Mode nuit pour le formulaire */
+body.dark-mode #test2 {
+    background-image: url('images/ylangnoir.png');
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/* Titre */
+#test2 h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #test2 h1 {
+    color: white;
+}
+
+/* Séparation */
+#test2 .separation {
+    width: 100%;
+    height: 5px;
+    background-color: #747cdf;
+    margin-bottom: 30px;
+}
+
+body.dark-mode #test2 .separation {
+    background-color: #9fa8ff;
+}
+
+/* Corps du formulaire */
+#test2 .corps-formulaire {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+#test2 .corps-formulaire .gauche,
+#test2 .corps-formulaire .droite {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Groupes de champs */
+#test2 .corps-formulaire .groupe {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+#test2 label {
+    font-size: clamp(16px, 2.2vw, 20px) !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #test2 label {
+    color: white !important;
+}
+
+/* Champs de texte - TOUS LES TYPES */
+#test2 input[type="text"],
+#test2 input[type="email"],
+#test2 input[type="tel"],
+#test2 select {
+    font-size: clamp(16px, 2vw, 20px) !important;
+    height: clamp(50px, 7vh, 65px) !important;
+    padding: 10px 10px 10px 45px !important;
+    border: 1px solid #c9c9c9;
+    outline-color: #747cdf;
+    border-radius: 8px;
+    width: 100%;
+    transition: all 0.3s ease;
+    background-color: white;
+    cursor: pointer;
+}
+
+body.dark-mode #test2 input[type="text"],
+body.dark-mode #test2 input[type="email"],
+body.dark-mode #test2 input[type="tel"],
+body.dark-mode #test2 select {
+    background-color: #2d2d2d;
+    color: white;
+    border: 1px solid #555;
+}
+
+
+#test2 select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23747cdf' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px !important;
+}
+
+body.dark-mode #test2 select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239fa8ff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+}
+
+#test2 select option {
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode #test2 select option {
+    background-color: #2d2d2d;
+    color: white;
+}
+
+/* Icônes */
+#test2 i {
+    position: absolute;
+    left: 0;
+    top: 38px;
+    padding: 12px 10px;
+    color: #747cdf;
+    font-size: clamp(16px, 1.8vw, 20px) !important;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #test2 i {
+    color: #9fa8ff;
+}
+
+/* Zone de texte (message) */
+#test2 textarea {
+    font-size: clamp(16px, 2vw, 20px) !important;
+    min-height: 250px !important;
+    margin-top: 5px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border: 2px solid #747cdf;
+    outline: none;
+    border-radius: 8px;
+    resize: vertical;
+    width: 100%;
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+body.dark-mode #test2 textarea {
+    background-color: #2d2d2d;
+    color: white;
+    border: 2px solid #555;
+}
+
+/* Checkbox */
+#test2 input[type="checkbox"] {
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#test2 .groupe:has(input[type="checkbox"]) {
+    flex-direction: row;
+    align-items: center;
+}
+
+#test2 .groupe label[for="user_subscribe_to_newsletter"] {
+    margin: 0;
+    font-size: clamp(15px, 1.8vw, 18px) !important;
+}
+
+/* Bouton d'envoi */
+#test2 .pied-formulaire button {
+    margin-top: 20px;
+    background-color: #747cdf;
+    color: white;
+    font-size: clamp(18px, 2.2vw, 24px) !important;
+    border: none;
+    padding: 16px 36px !important;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+#test2 .pied-formulaire button:hover {
+    transform: scale(1.05);
+    background-color: #5f6bc7;
+}
+
+body.dark-mode #test2 .pied-formulaire button {
+    background-color: #9fa8ff;
+}
+
+body.dark-mode #test2 .pied-formulaire button:hover {
+    background-color: #8891ff;
+}
+
+/* Responsive */
+@media screen and (max-width: 920px) {
+    #test2 .corps-formulaire {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #fonctat {
+        width: 95%;
+        border-radius: 40px;
+    }
+
+    #test2 {
+        padding: 30px;
+        border-radius: 30px;
+    }
+}
+
 
 
 
