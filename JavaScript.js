@@ -427,6 +427,38 @@ initFooter();
 
 /* DAVID - page histoire */
 
+function toggleLogin() {
+    const form = document.getElementById('D');
+    const overlay = document.getElementById('overlay');
+    form.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
+
+function handleSubmit(e) {
+    e.preventDefault();
+    alert('Formulaire soumis !');
+}
+
+// Fermer avec la touche Échap
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const form = document.getElementById('D');
+        const overlay = document.getElementById('overlay');
+        if (form.classList.contains('active')) {
+            toggleLogin();
+        }
+    }
+});
+
+function toggleLogin() {
+    const form = document.getElementById('D');
+    const overlay = document.getElementById('overlay');
+    form.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
+
+
+
 // paramètres du mode clair/sombre
 function switchMode() {
 
@@ -454,7 +486,6 @@ function switchMode() {
 
 
 }
-
 
 
 
@@ -745,6 +776,7 @@ document.addEventListener("click", (e) => {
 
 
 /* FARES - page contact */
+
 
 
 
