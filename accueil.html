@@ -51,9 +51,45 @@
         <img id="logo" src="images/logo.png">
     </a>
     <!-- Raccourci Vers le menu accueil -->
-      
+
 </header>
-      <nav>
+
+
+<button class="login-btn" onclick="toggleLogin()">Se Connecter</button>
+<div class="overlay" id="overlay" onclick="toggleLogin()"></div>
+
+
+
+<article id="D" class="float">
+<div class = "centero">
+    <h1 id="je_suis_differents"> Se Connecter</h1>
+    <form method="post">
+        <button type="button" class="close-btn" onclick="toggleLogin()">×</button>
+
+
+        <div class="txt_field">
+            <input type="text" required>
+            <span> </span>
+            <label>
+                Adresse électronique *
+            </label>
+        </div>
+
+        <div class="txt_field">
+            <input type="password" required>
+            <span> </span>
+            <label> Mot de passe *</label>
+        </div>
+
+        <div class="forgot"> probleme d'identification ?  </div>
+        <input type="submit" value="Login">
+        <div class="users_signup">
+            S'inscrire <a href="#">Ici</a>
+        </div>
+        </form>
+    </div>
+</article>
+<nav>
         <ul class="navbar">
             <li class="navbar_item"><a class="navbar_link" href="accueil.html">
                 <span class="material-icons">Accueil</span></a></li>
