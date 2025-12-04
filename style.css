@@ -661,6 +661,240 @@ footer {
 /* DAVID - page histoire */
 
 
+.login-btn {
+    position: fixed;
+    top: 1.25rem;
+    left: 1.25rem;
+    right: auto;
+    background: linear-gradient(135deg, rgb(255, 220, 94) 0%, rgba(169, 255, 161, 0.85) 100%);
+    color: #000;
+    border: 2px solid rgba(0,0,0,0.15);
+    padding: clamp(1.2rem, 3.2vw, 2.2rem) clamp(2rem, 4.2vw, 3.2rem);
+    border-radius: 1.5rem;
+    font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    z-index: 10000;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    filter: saturate(1.1) brightness(1.05);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.float {
+    background: #ffffff;
+    color: #111;
+    border-radius: 28px;
+    padding: clamp(2.5rem, 5vw, 6rem);
+    box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+    width: min(98vw, 1600px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 9999;
+}
+
+.float.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.centero {
+    width: 100%;
+}
+
+#je_suis_differents {
+    text-align: center;
+    color: #667eea;
+    margin-bottom: clamp(28px, 5vw, 56px);
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 800;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 36px;
+    color: #999;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+    transform: rotate(90deg);
+}
+
+form .txt_field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 35px 0;
+}
+
+.txt_field input {
+    width: 100%;
+    padding: 0 18px;
+    height: clamp(90px, 14vh, 140px);
+    font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    color: #7a7a7a;
+    transform: translateY(-50%);
+    font-size: clamp(1.4rem, 2.8vw, 2rem);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.txt_field span::before {
+    content: '';
+    position: absolute;
+    top: clamp(86px, 13vh, 136px);
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #2691d9;
+    transition: 0.5s;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+    width: 100%;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+    top: -5px;
+    color: #2691d9;
+    font-size: 15px;
+}
+
+.forgot {
+    margin: -5px 0 20px 5px;
+    color: #2086df;
+    cursor: pointer;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    width: fit-content;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: clamp(100px, 16vh, 160px);
+    border: 2px solid #2691d9;
+    background-color: #2691d9;
+    border-radius: 18px;
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    color: #e9f4fb;
+    font-weight: 900;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #1e7ec8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(38, 145, 217, 0.3);
+}
+
+.users_signup {
+    margin: 30px 0 0 0;
+    text-align: center;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: #666666;
+}
+
+.users_signup a {
+    color: #2691d9;
+    text-decoration: none;
+    font-weight : 800;
+    font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+}
+
+.users_signup a:hover {
+    text-decoration: underline;
+}
+
+/* Lisibilité du formulaire en mode nuit */
+body.dark-mode #D.float .txt_field input {
+    color: #ffffff !important;
+}
+body.dark-mode #D.float .txt_field input::placeholder {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+body.dark-mode #D.float .txt_field label {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+body.dark-mode #D.float .txt_field input:focus ~ label,
+body.dark-mode #D.float .txt_field input:valid ~ label {
+    color: #ffffff !important;
+}
+body.dark-mode #D.float .txt_field span::before {
+    background: #ffffff !important;
+}
+
+
+#D{
+    margin: 0 auto;
+    border: 2px solid;
+    border-color: #000000;
+    border-radius: 100px;
+    width: 1000px;
+    height: 1000px;
+    margin-top: 2%;
+    background: linear-gradient( 215deg, rgba(169, 255, 161, 0.514), rgb(255, 220, 94) )
+}
+
+/* Neutraliser le dégradé et la taille fixe quand #D est utilisé comme modale */
+#D.float {
+    background: #ffffff !important;
+    border-width: 0;
+    width: auto;
+    height: auto;
+    border-radius: 28px;
+}
+
+
+
 
 
 img#ylang-valeurs {
@@ -1625,6 +1859,7 @@ img.float {
 
 
 /* FARES - page contact */
+
 
 
 
