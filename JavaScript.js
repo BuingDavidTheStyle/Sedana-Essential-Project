@@ -679,30 +679,69 @@ setInterval(nextCslide, 5000); //en ms
 // Listes des produits par catégorie
 const CcatalogueProduits = {
     bougies: [
-        { img: "images/bougie1.jpg", desc: "Aromatherapy Candle Workshop – Featuring Ylang Ylang,\n",nom: "Bougie Aromathérapie" },
-        { img: "images/bougie2.jpg", desc: "Bougie coco sauvage" , prix: 10 ,nom: "Bougie Coco" },
-        { img: "images/bougie3.jpg", desc: "Bougie coco sauvage" , prix: 10 ,nom: "Bougie Coco" },
-        { img: "images/bougie4.jpg", desc: "Bougie coco sauvage" , prix: 10 ,nom: "Bougie Coco" },
-        { img: "images/candlejar.png", desc: "Bougie fleur de coton" , prix: 10 ,nom: "Bougie Coco" }
+        { img: "images/bougie1.jpg",
+            desc: { fr: "Bougie parfumée coco sauvage", en: "Wild coconut scented candle" },
+            prix: 10 ,
+            nom: {fr:"Bougie Coco",en:"Coconut candle"} },
+
+        { img: "images/bougie2.jpg",
+            desc: { fr: "Bougie parfumée pomme sauvage", en: "Wild apple scented candle" },
+            prix: 10 ,
+            nom: {fr:"Bougie Coco",en:"Coconut candle"} },
+
+        { img: "images/bougie3.jpg",
+            desc: { fr: "Bougie parfumée coco sauvage", en: "Wild coconut scented candle" },
+            prix: 10 ,
+            nom: {fr:"Bougie Coco",en:"Coconut candle"} },
+
+        { img: "images/bougie4.jpg",
+            desc: { fr: "Bougie parfumée banane sauvage", en: "Wild banana scented candle" },
+            prix: 10 ,
+            nom: {fr:"Bougie Coco",en:"Coconut candle"} },
+
+        { img: "images/candlejar.png",
+            desc: { fr: "Bougie parfumée coco sauvage", en: "Wild coconut scented candle" },
+            prix: 10 ,
+            nom: {fr:"Bougie Coco",en:"Coconut candle"} }
     ],
 
     sel_de_bain: [
-        { img: "images/bath_salt.png", desc: "Fondant floral" , prix: 10 ,nom: "Bougie Coco" }
+        { img: "images/bath_salt.png",
+            desc: { fr: "Bougie parfumée coco sauvage", en: "Wild coconut scented candle" },
+            prix: 10 ,
+            nom: {fr:"Bougie Coco",en:"Coconut candle"}}
     ],
 
     diffuseurs: [
-        { img: "images/diffiuser.jpg", desc: "Diffuseur bâtonnets" , prix: 10 ,nom: "Bougie Coco" },
-        { img: "images/diffuseur2.jpg", desc: "Diffuseur zen", prix: 10 ,nom: "Bougie Coco" }
+        { img: "images/diffiuser.jpg",
+            desc: { fr: "diffuseur", en: "diffuser" },
+            prix: 10 ,
+            nom: {fr:"diffuseur",en:"diffuser"} },
+
+        { img: "images/diffuseur2.jpg",
+            desc: { fr: "diffuseur", en: "diffuser" },
+            prix: 10 ,
+            nom: {fr:"diffuseur",en:"diffuser"}  }
 
     ],
 
     huile_essentiels: [
-        { img: "images/essentialOil.jpg", desc: "Brume apaisante" , prix: 10 ,nom: "Bougie Coco" },
+        { img: "images/essentialOil.jpg",
+            desc: { fr: "huile essentiels parfumée", en: "scented essential oil" },
+            prix: 10 ,
+            nom: {fr:"huile esseniels",en:"essential oil"} }
     ],
 
     pots: [
-        { img: "images/pot1.jpg", desc: "Pot-pourri floral" , prix: 10 ,nom: "Bougie Coco" },
-        { img: "images/pot2.jpg", desc: "Pot-pourri eucalyptus" , prix: 10 ,nom: "Bougie Coco" }
+        { img: "images/pot1.jpg",
+            desc: { fr: "pots pourrit", en: "pots rot" },
+            prix: 10 ,
+            nom: {fr:"pots pourrit",en:"pots rot"}},
+
+        { img: "images/pot2.jpg",
+            desc: { fr: "Bougie parfumée coco sauvage", en: "Wild coconut scented candle" },
+            prix: 10 ,
+            nom: {fr:"Bougie Coco",en:"Coconut candle"}}
     ]
 };
 
@@ -730,14 +769,14 @@ Cbuttons.forEach(btn => {
         <div class="Cproduit">
             <img class="Cprod-img"
                  src="${p.img}"
-                 data-nom="${p.nom}"
-                 data-desc="${p.desc}"
+                 data-nom="${p.nom[lang]}"
+                 data-desc="${p.desc[lang]}"
                  data-prix="${p.prix}">
-            <p class="Ctitre">${p.nom}</p>
-            <p class="Cdesc">${p.desc}</p>
+            <p>${p.desc[lang]}</p>
         </div>
     `;
         });
+
 
 
         html += `</div>`;
@@ -849,11 +888,13 @@ function openCpopup(produit) {
     produitActuel = produit;
 
     CpopupImg.src = produit.img;
-    CpopupNom.textContent = produit.nom;
-    CpopupDesc.textContent = produit.desc;
+    CpopupNom.textContent = produit.nom[lang];
+    CpopupDesc.textContent = produit.desc[lang];
     CpopupPrix.textContent = produit.prix + " €";
 
     Cpopup.classList.remove("hidden");
+
+
 }
 
 // --- FERMETURE POPUP ---
@@ -933,6 +974,7 @@ document.addEventListener("click", (e) => {
 
 
 /* FARES - page contact */
+
 
 
 
