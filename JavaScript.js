@@ -973,8 +973,6 @@ document.addEventListener("click", (e) => {
 });
 
 
-/* FARES - page contact */
-
 
 
 
