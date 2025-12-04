@@ -324,15 +324,11 @@ const pageEN = `
 `;
 
 function switchLang() {
-    if (currentLang === "fr") {
-        document.body.innerHTML = pageEN;
-        currentLang = "en";
-    } else {
-        document.body.innerHTML = pageFR;
-        currentLang = "fr";
-    }
-
-    initFooter();
+    const next = (localStorage.getItem('lang') || currentLang || 'fr') === 'fr' ? 'en' : 'fr';
+    localStorage.setItem('lang', next);
+    currentLang = next;
+    applyLang(currentLang);
+    showLangToast(next === 'en' ? 'Language switched to English' : 'Langue changée en Français');
 }
 
 
@@ -340,7 +336,169 @@ function switchLang() {
 let slideIndex = 1;
 let autoplayInterval;
 
+function ensureLoginModal() {
+    // Avoid duplicate
+    if (document.querySelector('.login-btn') && document.getElementById('D') && document.getElementById('overlay')) return;
+
+    const isEN = (localStorage.getItem('lang') || 'fr') === 'en';
+
+    // Create login button if missing
+    let loginBtn = document.querySelector('.login-btn');
+    if (!loginBtn) {
+        loginBtn = document.createElement('button');
+        loginBtn.className = 'login-btn';
+        loginBtn.type = 'button';
+        loginBtn.textContent = isEN ? 'Log in' : 'Se Connecter';
+        loginBtn.addEventListener('click', toggleLogin);
+        const header = document.querySelector('header');
+        if (header) header.insertAdjacentElement('afterend', loginBtn);
+        else document.body.prepend(loginBtn);
+    }
+
+    // Create overlay if missing
+    if (!document.getElementById('overlay')) {
+        const overlay = document.createElement('div');
+        overlay.id = 'overlay';
+        overlay.className = 'overlay';
+        overlay.addEventListener('click', toggleLogin);
+        document.body.appendChild(overlay);
+    }
+
+    // Create modal if missing
+    if (!document.getElementById('D')) {
+        const article = document.createElement('article');
+        article.id = 'D';
+        article.className = 'float';
+        article.innerHTML = `
+        <div class="centero">
+            <h1 id="je_suis_differents"> ${isEN ? 'Log in' : ' Se Connecter'}</h1>
+            <form method="post">
+                <button type="button" class="close-btn" onclick="toggleLogin()">×</button>
+
+                <div class="txt_field">
+                    <input type="text" required>
+                    <span> </span>
+                    <label>${isEN ? 'Email address *' : 'Adresse électronique *'}</label>
+                </div>
+
+                <div class="txt_field">
+                    <input type="password" required>
+                    <span> </span>
+                    <label>${isEN ? 'Password *' : ' Mot de passe *'}</label>
+                </div>
+
+                <div class="forgot">${isEN ? 'Having trouble logging in?' : " probleme d'identification ?"}</div>
+                <input type="submit" value="${isEN ? 'Log in' : 'Login'}">
+                <div class="users_signup">
+                    ${isEN ? 'Sign up' : "S'inscrire"} <a href="#">${isEN ? 'Here' : 'Ici'}</a>
+                </div>
+            </form>
+        </div>`;
+        // Insert after login button
+        const btnRef = document.querySelector('.login-btn');
+        if (btnRef) btnRef.insertAdjacentElement('afterend', article);
+        else document.body.appendChild(article);
+    }
+}
+
+function showLangToast(message) {
+    const toast = document.createElement('div');
+    toast.textContent = message;
+    toast.setAttribute('role', 'status');
+    toast.style.cssText = [
+        'position:fixed',
+        'bottom:24px',
+        'right:24px',
+        'background:#111',
+        'color:#fff',
+        'padding:12px 16px',
+        'border-radius:10px',
+        'box-shadow:0 8px 24px rgba(0,0,0,0.25)',
+        'opacity:0',
+        'transform:translateY(10px)',
+        'transition:opacity .25s, transform .25s',
+        'z-index:10001',
+        'font-size:14px',
+        'font-weight:600'
+    ].join(';');
+    document.body.appendChild(toast);
+    requestAnimationFrame(() => {
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateY(0)';
+    });
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(10px)';
+        setTimeout(() => toast.remove(), 250);
+    }, 2200);
+}
+
+function applyLang(lang) {
+    // html lang
+    document.documentElement.setAttribute('lang', lang);
+
+    // Search placeholder
+    const searchInput = document.querySelector('.search-bar input[name="q"]');
+    if (searchInput) searchInput.placeholder = lang === 'en' ? 'Search for a product...' : 'Rechercher un produit...';
+
+    // Navbar labels
+    document.querySelectorAll('.navbar a.navbar_link').forEach(a => {
+        const href = a.getAttribute('href') || '';
+        if (href.includes('accueil')) a.textContent = lang === 'en' ? 'Home' : 'Accueil';
+        if (href.includes('histoire')) a.textContent = lang === 'en' ? 'Our Story' : 'Histoire';
+        if (href.includes('produits')) a.textContent = lang === 'en' ? 'Products' : 'Produits';
+        if (href.includes('contact')) a.textContent = lang === 'en' ? 'Contact' : 'Contact';
+    });
+
+    // Login button
+    const loginBtn = document.querySelector('.login-btn');
+    if (loginBtn) loginBtn.textContent = lang === 'en' ? 'Log in' : 'Se Connecter';
+
+    // Login modal labels
+    const title = document.getElementById('je_suis_differents');
+    if (title) title.textContent = lang === 'en' ? 'Log in' : ' Se Connecter';
+    const labels = document.querySelectorAll('#D .txt_field label');
+    if (labels && labels.length >= 2) {
+        if (lang === 'en') {
+            labels[0].textContent = 'Email address *';
+            labels[1].textContent = ' Password *';
+        } else {
+            labels[0].textContent = 'Adresse électronique *';
+            labels[1].textContent = ' Mot de passe *';
+        }
+    }
+    const forgot = document.querySelector('#D .forgot');
+    if (forgot) forgot.textContent = lang === 'en' ? 'Having trouble logging in?' : " probleme d'identification ?";
+    const submit = document.querySelector('#D input[type="submit"]');
+    if (submit) submit.value = lang === 'en' ? 'Log in' : 'Login';
+    const signup = document.querySelector('#D .users_signup');
+    if (signup) signup.innerHTML = lang === 'en' ? 'Sign up <a href="#">Here</a>' : `S'inscrire <a href="#">Ici</a>`;
+
+    // Main section header (if present)
+    const h2except = document.getElementById('except');
+    if (h2except) h2except.innerHTML = lang === 'en' ? `Let’s Get to Know Each Other Better <span>⚜️​</span>` : ` Faisons plus ample connaissance <span>⚜️​</span>`;
+}
+
+function ensureLoginBackgroundCSS() {
+    if (document.getElementById('login-bg-css')) return;
+    const st = document.createElement('style');
+    st.id = 'login-bg-css';
+    st.textContent = `
+      #D.float{background-image:url('images/ylangblanc.png') !important;background-size:cover;background-position:center;background-repeat:no-repeat;}
+      body.dark-mode #D.float{background-image:url('images/ylangnoir.png') !important;}
+    `;
+    document.head.appendChild(st);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+    ensureLoginModal();
+    ensureLoginBackgroundCSS();
+
+    // Appliquer la langue sauvegardée
+    const savedLang = localStorage.getItem('lang') || currentLang || 'fr';
+    currentLang = savedLang;
+    applyLang(currentLang);
+
     showSlides(slideIndex);
     startAutoplay();
 });
@@ -486,7 +644,6 @@ function switchMode() {
 
 
 }
-
 
 
 
@@ -776,6 +933,7 @@ document.addEventListener("click", (e) => {
 
 
 /* FARES - page contact */
+
 
 
 
