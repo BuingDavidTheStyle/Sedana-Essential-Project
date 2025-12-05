@@ -11,6 +11,14 @@ const translations = {
         Contact: "Contact",
         Droit: "© 2025 Sedana Essential — Tous droits réservés",
         Partenaire: "Partenaire : Naraction",
+        BtnLogin: "Se Connecter",
+        LoginTitle: "Se Connecter",
+        LoginEmail: "Adresse électronique *",
+        LoginPassword: "Mot de passe *",
+        LoginForgot: "Problème d'identification ?",
+        LoginBtn: "Login",
+        LoginSignup: "S'inscrire Ici",
+
 
         //Clément
         lienFormulaire: "<--  appuyer ici pour être dirigé vers le formulaire de participation aux ateliers",
@@ -121,6 +129,51 @@ const translations = {
         LabelNewsletter:"Recevoir la newsletter",
         BoutonEnvoyer:"Envoyer",
 
+        //Mohammad
+        ConnaissanceAccueil: "Faisons plus ample connaissance ⚜️",
+        IntroP1:
+            "Bienvenue chez Sedana Essential, une association dédiée à la promotion du bien-être naturel à travers l'Ylang-Ylang, une fleur aux vertus apaisantes et reconnue depuis des générations.\n" +
+            "                    Notre mission est de sensibiliser, partager et valoriser les bienfaits de cette essence unique, tout en soutenant des pratiques locales respectueuses de l’environnement et des communautés qui la cultivent.",
+        IntroP2:
+            "Chez Sedana Essential, nous croyons en une approche authentique du bien-être : naturelle, simple et accessible à tous.\n" +
+            "                    À travers nos ateliers, actions solidaires et programmes éducatifs, nous œuvrons pour reconnecter chacun à un équilibre profond, inspiré par la nature.\n" +
+            "                    Découvrez un univers où l’harmonie, la sérénité et l’engagement durable se rencontrent.",
+
+        // Slide produits
+        TitreProduits: "Des produits pour tous les goûts",
+
+        Slide1Titre: "Diffuseur exotique",
+        Slide1Texte:
+            "Laissez votre intérieur s’imprégner d’une atmosphère douce et apaisante grâce à notre diffuseur de parfum. Élégant et discret, il libère progressivement des notes naturelles qui transforment chaque espace en véritable cocon de bien-être.",
+
+        Slide2Titre: "Bougie parfumée",
+        Slide2Texte:
+            "Fabriquée avec des ingrédients de qualité, notre bougie parfumée diffuse une fragrance délicate et chaleureuse. Parfaite pour créer une ambiance cosy, elle accompagne vos moments de détente et enveloppe votre intérieur d’un parfum harmonieux.",
+
+        Slide3Titre: "Huile thérapeutique",
+        Slide3Texte:
+            "Pure, naturelle et soigneusement sélectionnée, notre huile essentielle offre une expérience sensorielle unique. Quelques gouttes suffisent pour rééquilibrer l’esprit, favoriser la relaxation et enrichir vos rituels bien-être au quotidien.",
+
+        // Processus de fabrication
+        ProcessTitre: "Un processus de fabrication millimétré",
+
+        Step1Titre: "Récolte et sélection",
+        Step1Txt:
+            "Les fleurs d’Ylang-Ylang sont soigneusement récoltées à la main à l’aube pour préserver toute leur fraîcheur et leur richesse aromatique.",
+
+        Step2Titre: "Distillation traditionnelle",
+        Step2Txt:
+            "Les fleurs sont distillées lentement à la vapeur selon un procédé ancestral, permettant d’extraire une essence pure et équilibrée.",
+
+        Step3Titre: "Filtration et décantation",
+        Step3Txt:
+            "L’huile obtenue est filtrée puis décantée naturellement afin de garantir une qualité optimale sans additif. Cela est sans risque pour l'environnement.",
+
+        Step4Titre: "Mise en flacon",
+        Step4Txt:
+            "L’essence finale est conditionnée avec soin dans des flacons respectueux de l'environnement, prête à accompagner vos rituels bien-être.",
+
+
     },
 
     en: {
@@ -131,9 +184,17 @@ const translations = {
         Contact: "Contact",
         Droit: "© 2025 Sedana Essential — All rights reserved",
         Partenaire: "Partner : Naraction",
+        BtnLogin: "Login",
+        LoginTitle: "Login",
+        LoginEmail: "Email address *",
+        LoginPassword: "Password *",
+        LoginForgot: "Identification problem?",
+        LoginBtn: "Login",
+        LoginSignup: "Register Here",
+
 
         //Clément
-        lienFormulaire: "<-- click here to be redirected to the workshop registration form",
+        lienFormulaire: "<--  click here to be redirected to the workshop registration form",
         Panier: "Cart",
         PanierVide: "Empty cart or X item(s) in your cart",
         BoutonCommander: "Order and pay",
@@ -154,6 +215,7 @@ const translations = {
         SelectionBouton: "Select a category to display the products",
         btn_add_cart: "Add to cart",
 
+        //David
         //David (Histoire)
         Connaissance: "•A story of passion for natural beauty, born from a love of plants and a commitment to a more sustainable and ecological world. ♻️",
         TitreHistoire: "Our History",
@@ -233,8 +295,34 @@ const translations = {
         LabelNewsletter:"Receive newsletter",
         BoutonEnvoyer:"Send",
 
+        //Mohammad
+        Step4Txt: "The final essence is carefully packaged in environmentally friendly bottles, ready to accompany your wellness rituals.",
+        Step4Titre: "Bottling",
+        Step3Txt: "The obtained oil is filtered and then naturally decanted to ensure optimal quality without additives. This poses no risk to the environment.",
+        Step3Titre: "Filtration and settling",
+        Step2Txt: "The flowers are slowly steam-distilled using an ancestral process, allowing a pure and balanced essence to be extracted.",
+        Step2Titre: "Traditional distillation",
+        Step1Txt: "Ylang-ylang flowers are carefully handpicked at dawn to preserve all their freshness and aromatic richness.",
+        Step1Titre: "Harvesting and selection",
+        ProcessTitre: "A highly precise manufacturing process",
+        Slide3Titre: "Therapeutic oil",
+        Slide2Titre: "Scented candle",
+        Slide1Titre: "Exotic diffuser",
+        Slide1Texte: "Let your home be filled with a soft and soothing atmosphere thanks to our fragrance diffuser. Elegant and discreet, it gradually releases natural notes that transform any space into a true cocoon of well-being.",
+        Slide2Texte: "Made with high-quality ingredients, our scented candle releases a delicate and warm fragrance. Perfect for creating a cozy atmosphere, it enhances your moments of relaxation and fills your home with a harmonious scent.",
+        Slide3Texte: "Pure, natural, and carefully selected, our essential oil offers a unique sensory experience. Just a few drops are enough to rebalance the mind, promote relaxation, and enrich your daily wellness rituals.",
+        TitreProduits: "Products for every taste",
+        IntroP2:
+            "At Sedana Essential, we believe in an authentic approach to well-being: natural, simple and accessible to all.\n" +
+            "                    Through our workshops, solidarity actions and educational programs, we work to reconnect everyone to a deep balance, inspired by nature.\n" +
+            "                    Discover a world where harmony, serenity and lasting commitment meet.",
+        IntroP1:
+            "Welcome to Sedana Essential, an association dedicated to promoting natural well-being through Ylang-Ylang, a flower with soothing properties recognized for generations.\n" +
+            "                    Our mission is to raise awareness, share and promote the benefits of this unique essence, while supporting local practices that respect the environment and the communities that cultivate it.",
+        ConnaissanceAccueil: "Let’s get to know each other ⚜️",
     }
 };
+
 
 // =============================
 //   FONCTION DE TRADUCTION
@@ -254,6 +342,9 @@ function applyTranslation(lang) {
         else {
             el.textContent = translations[lang][key];
         }
+        //pour la partie recherche un produit
+        const searchInput = document.querySelector('.search-bar input[name="q"]');
+        if (searchInput) searchInput.placeholder = lang === 'en' ? 'Search for a product...' : 'Rechercher un produit...';
     });
 
     localStorage.setItem("lang", lang);
@@ -277,3 +368,4 @@ function toggleLangC() {
 document.addEventListener("DOMContentLoaded", () => {
     applyTranslation(lang);
 });
+
