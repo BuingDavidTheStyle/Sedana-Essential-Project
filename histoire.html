@@ -7,7 +7,303 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <script src="traduction.js" defer></script>
-    <style>
+    <style><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedana Essential</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <script src="traduction.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="head">
+        <div class="left">
+            <form class="search-bar" action="/recherche.php" method="GET">
+                <input type="text" name="q"  placeholder="Rechercher un produit..." required>
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+
+        <h1 class="same">Sedana Essential</h1>
+
+        <div class="right"></div>
+    </div>
+
+    <div class="night-toggle" onClick="switchMode()">
+        <div id="moon" class="moon"></div>
+    </div>
+
+    <div class="test">
+        <div class="test_content">
+            <span data-key="ContactNous">Contactez-nous au + 44 73.42.36.85.84</span>
+        </div>
+    </div>
+
+    <div class="lang-toggle" onclick="toggleLangC()">🇫🇷 / 🇬🇧</div>
+
+    <a href="accueil.html" aria-label="Accueil">
+        <img id="logo" src="images/logo.png">
+    </a>
+</header>
+
+
+<button class="login-btn" onclick="toggleLogin()" data-key="BtnLogin">Se Connecter</button>
+<div class="overlay" id="overlay" onclick="toggleLogin()"></div>
+
+<article id="D" class="float">
+    <div class="centero">
+        <h1 id="je_suis_differents" data-key="LoginTitle">Se Connecter</h1>
+
+        <form method="post">
+            <button type="button" class="close-btn" onclick="toggleLogin()">×</button>
+
+            <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label data-key="LoginEmail">Adresse électronique *</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="password" required>
+                <span></span>
+                <label data-key="LoginPassword">Mot de passe *</label>
+            </div>
+
+            <div class="forgot" data-key="LoginForgot">Problème d'identification ?</div>
+
+            <input type="submit" value="Login" data-key="LoginBtn">
+
+            <div class="users_signup" data-key="LoginSignup">
+                S'inscrire <a href="#">Ici</a>
+            </div>
+        </form>
+    </div>
+</article>
+
+<nav>
+    <ul class="navbar">
+        <li class="navbar_item"><a class="navbar_link" href="accueil.html" data-key="Accueil">Accueil</a></li>
+        <li class="navbar_item"><a class="navbar_link" href="histoire.html" data-key="Histoire">Histoire</a></li>
+        <li class="navbar_item"><a class="navbar_link" href="produits.html" data-key="Produits">Produits</a></li>
+        <li class="navbar_item"><a class="navbar_link" href="contact.html" data-key="Contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <article id="gradient">
+        <div class="histoire-section">
+            <img id="histoire-image" src="images/ylang2-removebg-preview.png" alt="Notre Histoire">
+            <h2 data-key="TitreHistoire" id="except">Notre Histoire <span>❤︎</span></h2>
+        </div>
+        <div id="Introduction">
+            <div class="text-box">
+                <div><p data-key="Connaissance" id="text">•Une histoire de passion pour la beauté naturelle,née de l'amour des plantes et
+                    de l'engagement envers un monde plus durable et ecologique.♻️ </p></div></div>
+            <div class="container1"> <img id="ylang2" src="images/ylyl.jpg" alt="corrumpted" width="700" height="500" style="margin-top: -755px; margin-left:0;">
+            </div>
+        </div>
+        <div class="slideshow-container" style="margin-right: 999px;right: -500px;">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="images/okpierre.jpeg" style="width:55%;margin-right: -500px;margin-left: -30px;border-radius:150px;">
+                <div class="descript2">
+                    <h3 data-key="ile">🌺 îles aux parfums 🌺</h3>
+                    <p data-key="iledescript">
+                        •Les « îles aux parfums », traduites dans les îles du Pérou, c’est ce  que j’ai appris plus tard que l’île de ma famille était connue sous le  nom de celle-ci. Dès ma toute première visite, cette belle île des  Comores a laissé une empreinte indélébile sur ma vie et constitue la  base de mon entreprise aujourd'hui.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="images/immo.jpg" style="width:100%;margin-right: -500px;margin-left: 99px;margin-top: 150px;margin-bottom: 5px;border-radius:150px;">
+                <div class="descript3">
+                    <h3 data-key="passion">✈❤️️ Une Passion Née d’un Voyage ✈❤️️</h3>
+                    <p data-key="passiondescript">
+                        •Fabriquée avec des ingrédients de qualité, notre bougie parfumée diffuse une fragrance
+                        délicate et chaleureuse. Parfaite pour créer une ambiance cosy, elle accompagne vos
+                        moments de détente et enveloppe votre intérieur d’un parfum harmonieux.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="images/ylang4.jpeg" style="width:55%;margin-right: -500px;margin-left: -30px;border-radius:150px;">
+                <div class="descript2">
+                    <h3 data-key="bienvenue">✨ Bienvenue dans le monde du parfum ✨</h3>
+                    <p data-key="bienvenuedescript">
+                        •Nous sommes une petite entreprise familiale qui fait de grands pas en proposant une gamme de produits utilisant de l'YLANG YLANG provenant des Comores, en commençant par nos huiles. «Nous vous apportons les îles des parfums» est notre mission et SEDANA ESSENTIAL est notre véhicule pour y parvenir. Ayant vu et vécu les avantages incroyables d'utiliser cette glorieuse huile essentielle sur les cheveux, la peau et l'état d'esprit, d'un enfant à la mère, SEDANA ESSENTIAL veut que vous, notre client, nous rejoigniez dans un voyage de bien-être à travers la nature.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="images/600_ylang-afp_01.jpg" style="width:55%;margin-right: -500px;margin-left: -30px;border-radius:150px;">
+                <div class="descript3">
+                    <h3 data-key="notremission">🌸 Notre Mission et Objectif 🌸</h3>
+                    <p data-key="notremissiondescript">
+                        •Mon objectif est de créer des produits nouveaux et originaux, fabriqués artisanalement à partir d'ingredients frais et naturels.L'objectif est d'éliminer les conservateurs artificiels et inutiles afin de garantir la pureté et l'accessibilité de nos produits à tous.
+                    </p>
+                </div>
+            </div>
+
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="bienfaits-section">
+            <img id="ylang-bienfaits" src="images/ylang5-removebg-preview.png" alt="Ylang Ylang">
+            <h1 data-key="principalebienfaits">LES PRINCIPALES BIENFAITS DU YLANG YLANG</h1>
+        </div>
+        <div class="bienfaits-grid">
+            <div class="bienfait-card">
+                <img src="images/this-is-the-human-nervous-system-proving-v0-kbtv4pyunre91.webp" alt="Nerveux">
+                <h3 data-key="BienfaitNerveux">🧘 Système Nerveux</h3>
+                <p data-key="DescBienfaitNerveux">Le Ylang Ylang contient des esters et des monoterpènes qui agissent sur le système nerveux central, favorisant la détente et réduisant l'anxiété.</p>
+            </div>
+
+            <div class="bienfait-card">
+                <img src="images/hormonal.jpg" alt="Hormonal">
+                <h3 data-key="BienfaitHormonal">🧬 Equilibre Hormonal</h3>
+                <p data-key="DescBienfaitHormonal">Influence positive sur la production de sérotonine et de dopamine,contribuant à l'équilibre émotionnel.</p>
+            </div>
+
+            <div class="bienfait-card">
+                <img src="images/microbes.webp" alt="Anti Microbes">
+                <h3 data-key="BienfaitAntiMicrobien">🦠🛡️ Propriétés Antimicrobiennes</h3>
+                <p data-key="DescBienfaitAntiMicrobien">Les composés phénoliques de l'ylang-ylang possèdent des propriétés antibactériennes et antifongiques naturelles.</p>
+            </div>
+
+            <div class="bienfait-card">
+                <img src="images/14244710.png" alt="Circulation Sanguine">
+                <h3 data-key="BienfaitCirculation">❤️🩸 Circulation Sanguine</h3>
+                <p data-key="DescBienfaitCirculation">Ses propriétés vasodilatatrices aident à réguler la tension artérielle et améliorer la circulation périphérique.</p>
+            </div>
+        </div>
+
+        <div class="valeurs-section">
+            <img id="ylang-valeurs" src="images/ylang1-removebg-preview.png" alt="Ylang Ylang">
+            <h1 data-key="TitreValeurs">Nos Valeurs</h1>
+        </div>
+
+        <div class="bienfaits-grid">
+            <div class="bienfait-card">
+                <img src="images/sindid.avif" alt="Bien-être">
+                <h3 data-key="ValeurAuthentique">❤️Bien-être Authentique</h3>
+                <p data-key="DescValeurAuthentique">Nous croyons que la vraie beauté vient de l'harmonie entre le corps et l'esprit, nourrie par la nature.</p>
+            </div>
+
+            <div class="bienfait-card">
+                <img src="images/depositphotos_68092337-stock-illustration-100-natural-stamp.webp" alt="100% Naturel">
+                <h3 data-key="ValeurNaturel">💯 100% Naturel</h3>
+                <p data-key="DescValeurNaturel">Nos produits sont formulés exclusivement avec des ingrédients d'origine naturelle, sans substances chimiques nocives.</p>
+            </div>
+
+            <div class="bienfait-card">
+                <img src="images/perssone.avif" alt="personnes">
+                <h3 data-key="ValeurCommunaute">😇Une Communauté Bienveillante😇</h3>
+                <p data-key="DescValeurCommunaute">Nous cultivons une communauté basée sur le partage, l'entraide et la passion commune pour la beauté naturelle.</p>
+            </div>
+
+            <div class="bienfait-card">
+                <img src="images/eco.webp" alt="Ecologiquement prouvé">
+                <h3 data-key="ValeurEco">♻️🌏Eco-responsable</h3>
+                <p data-key="DescValeurEco">Notre engagement environnemental se reflète dans nos emballages recyclables et nos pratiques durables.</p>
+            </div>
+
+            <div class="bienfait-card">
+                <img src="images/7ca8b7f553a7213bf47a80f687ddf652.jpg" alt="Qualite top max">
+                <h3 data-key="ValeurQualite">🛡️ 💪Qualite Prenium</h3>
+                <p data-key="DescValeurQualite">Chaque produit est rigoureusement testé et certifié pour garantir une efficacité et une sécurité optimales.</p>
+            </div>
+
+            <div class="bienfait-card">
+                <img src="images/coche-ruban-prix-style-degrade-etoiles_78370-1098.avif" alt="Anti Microbes">
+                <h3 data-key="ValeurExcellence">🏆 Excellence Artisanale</h3>
+                <p data-key="DescValeurExcellence">Nos formules sont créées avec le savoir faire traditionnel et les innovations les plus récentes.</p>
+            </div>
+        </div>
+        <div class="bienfaits-section">
+            <img id="bienetre" src="images/ylang3-removebg-preview.png" alt="Bien etre">
+            <h1 data-key="TitreBienEtre">Bien-être emotionelle</h1>
+        </div>
+
+        <div class="bienfaits-grid">
+            <div class="bienfait-card">
+                <img src="images/Yin_and_Yang_symbol.svg.png" alt="relaxe">
+                <h3 data-key="BEE_Relaxation">🧘‍♀️🧘‍♂️Relaxation Profonde</h3>
+                <p data-key="DescBEE_Relaxation">Réduit le stress et favorise un sommeil réparateur grâce à ses propriétés sédatives naturelles.</p>
+            </div>
+
+            <div class="bienfait-card">
+                <img src="images/istockphoto-1320988015-612x612.jpg" alt="Confiance">
+                <h3 data-key="BEE_Confiance">💪Confiance en Soi</h3>
+                <p data-key="DescBEE_Confiance">Stimule l'estime de soi et aide à retrouver l'harmonie intérieur et la joie de vivre.</p>
+            </div>
+
+            <div class="bienfait-card">
+                <img src="images/gradient-du-cercle-foudre_78370-5397.avif" alt="100% Naturel">
+                <h3 data-key="BEE_Energie">⚡⚡Energie Positive</h3>
+                <p data-key="DescBEE_Energie">Combat la fatigue mentale et apporte une sensation de vitalité de d'optimisme.</p>
+            </div>
+
+            <div class="bienfait-card">
+                <img src="images/images.jpeg" alt="100% Naturel">
+                <h3 data-key="BEE_Equilibre">⚖️Equilibre Emotionnel ⚖️</h3>
+                <p data-key="DescBEE_Equilibre">Harmonise les émotions et ajde à gérer les changements d'humeur naturellement.</p>
+            </div>
+        </div>
+
+    </article>
+
+</main>
+
+
+<footer class="testC">
+    <img id="floatC" class="logoC" src="images/logo.png" alt="logo">
+    <p data-key="Droit" class="p"> © 2025 Sedana Essential — Tous droits réservés</p>
+
+    <div class="partner-container">
+        <a href="https://www.naraction.fr/" target="_blank" class="partner-link">
+            <img src="images/association-naraction-1-Aq2JVXLg4VU2P76Z.avif" alt="Logo Partenaire Naraction" class="partner-logo">
+        </a>
+        <p data-key="Partenaire" class="p partner-text">Partenaire : Naraction</p>
+    </div>
+    <div class="social-links">
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+            <img src="images/facebook.webp" alt="Facebook">
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+            <img src="images/instagram.webp" alt="Instagram">
+        </a>
+
+        <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.webp" alt="LinkedIn">
+        </a>
+    </div>
+
+</footer>
+<script src="JavaScript.js"></script>
+</body>
+</html>
         /* Forcer la meme modale de login que l'accueil sur cette page */
         #D.float { width: min(98vw, 1600px) !important; height: auto !important; border: 0 !important; background: #fff !important; border-radius: 28px !important; padding: clamp(2.5rem, 5vw, 6rem) !important; }
         #D.float #je_suis_differents { font-size: clamp(3rem, 7vw, 5rem) !important; }
@@ -261,3 +557,4 @@
 <script src="JavaScript.js"></script>
 </body>
 </html>
+
