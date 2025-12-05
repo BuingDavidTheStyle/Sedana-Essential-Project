@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contactez-nous - Sedana Essential</title>
+    <title>Sedana Essential</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <script src="traduction.js" defer></script>
 </head>
+
 <body>
+
 <header>
     <div class="head">
         <div class="left">
             <form class="search-bar" action="/recherche.php" method="GET">
-                <input type="text" name="q" placeholder="Rechercher un produit..." required data-key="RecherchePlaceholder">
+                <input type="text" name="q"  placeholder="Rechercher un produit..." required>
                 <button type="submit">🔍</button>
             </form>
         </div>
@@ -31,7 +38,7 @@
 
     <div class="test">
         <div class="test_content">
-            <span data-key="ContactNous">Contactez-nous au <b>+ 44 73.42.36.85.84</b></span>
+            <span data-key="ContactNous">Contactez-nous au + 44 73.42.36.85.84</span>
         </div>
     </div>
 
@@ -42,73 +49,106 @@
     </a>
 </header>
 
+
+<button class="login-btn" onclick="toggleLogin()" data-key="BtnLogin">Se Connecter</button>
+<div class="overlay" id="overlay" onclick="toggleLogin()"></div>
+
+<article id="D" class="float">
+    <div class="centero">
+        <h1 id="je_suis_differents" data-key="LoginTitle">Se Connecter</h1>
+
+        <form method="post">
+            <button type="button" class="close-btn" onclick="toggleLogin()">×</button>
+
+            <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label data-key="LoginEmail">Adresse électronique *</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="password" required>
+                <span></span>
+                <label data-key="LoginPassword">Mot de passe *</label>
+            </div>
+
+            <div class="forgot" data-key="LoginForgot">Problème d'identification ?</div>
+
+            <input type="submit" value="Login" data-key="LoginBtn">
+
+            <div class="users_signup" data-key="LoginSignup">
+                S'inscrire <a href="#">Ici</a>
+            </div>
+        </form>
+    </div>
+</article>
+
 <nav>
     <ul class="navbar">
-        <li class="navbar_item"><a class="navbar_link" href="accueil.html">
-            <span class="material-icons" data-key="Accueil">Accueil</span></a></li>
+        <li class="navbar_item"><a class="navbar_link" href="accueil.html" data-key="Accueil">Accueil</a></li>
         <li class="navbar_item"><a class="navbar_link" href="histoire.html" data-key="Histoire">Histoire</a></li>
-        <li class="navbar_item"><a class="navbar_link" href="produits.html"><span class="material-icons" data-key="Produits">Produits</span></a></li>
+        <li class="navbar_item"><a class="navbar_link" href="produits.html" data-key="Produits">Produits</a></li>
         <li class="navbar_item"><a class="navbar_link" href="contact.html" data-key="Contact">Contact</a></li>
     </ul>
 </nav>
-
-<!--<article id="fonctat">-->
-<!--    <form id="test2">-->
-<!--        <h1 data-key="FormulaireTitre">Contactez-nous</h1>-->
-<!--        <div class="separation"></div>-->
-<!--        <div class="corps-formulaire">-->
-<!--            <div class="gauche">-->
-<!--                <div class="groupe">-->
-<!--                    <label data-key="LabelPrenom">Votre Prénom</label>-->
-<!--                    <input type="text" autocomplete="off" required />-->
-<!--                    <i class="fas fa-user"></i>-->
-<!--                </div>-->
-<!--                <div class="groupe">-->
-<!--                    <label data-key="LabelPrenom2">Votre Nom</label>-->
-<!--                    <input type="text" autocomplete="off" required />-->
-<!--                    <i class="fas fa-user"></i>-->
-<!--                </div>-->
-<!--                <div class="groupe">-->
-<!--                    <label data-key="LabelEmail">Votre adresse e-mail</label>-->
-<!--                    <input type="email" autocomplete="off" required />-->
-<!--                    <i class="fas fa-envelope"></i>-->
-<!--                </div>-->
-<!--                <div class="groupe">-->
-<!--                    <label data-key="LabelTelephone">Votre téléphone</label>-->
-<!--                    <input type="tel" autocomplete="off" required />-->
-<!--                    <i class="fas fa-mobile"></i>-->
-<!--                </div>-->
-<!--                <div class="groupe">-->
-<!--                    <label data-key="LabelSujet">Sujet de votre demande</label>-->
-<!--                    <select name="sujet" required>-->
-<!--                        <option value="" data-key="OptionChoisir">&#45;&#45; Choisissez un sujet &#45;&#45;</option>-->
-<!--                        <option value="info_produit" data-key="OptionInfoProduit">Information sur un produit</option>-->
-<!--                        <option value="commande" data-key="OptionCommande">Question sur une commande</option>-->
-<!--                        <option value="livraison" data-key="OptionLivraison">Problème de livraison</option>-->
-<!--                        <option value="retour" data-key="OptionRetour">Retour ou remboursement</option>-->
-<!--                        <option value="partenariat" data-key="OptionPartenariat">Proposition de partenariat</option>-->
-<!--                        <option value="autre" data-key="OptionAutre">Autre demande</option>-->
-<!--                    </select>-->
-<!--                    <i class="fas fa-question-circle"></i>-->
-<!--                </div>-->
-<!--                <div class="groupe">-->
-<!--                    <input type="checkbox" value="1" name="user[subscribe_to_newsletter]" id="user_subscribe_to_newsletter">-->
-<!--                    <label for="user_subscribe_to_newsletter" data-key="LabelNewsletter">Recevoir la newsletter</label>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="droite">-->
-<!--                <div class="groupe">-->
-<!--                    <label data-key="LabelMessage">Message</label>-->
-<!--                    <textarea placeholder="Saisissez ici..." required data-key="PlaceholderMessage"></textarea>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="pied-formulaire" align="center">-->
-<!--            <button type="submit" data-key="BoutonEnvoyer">Envoyer </button>-->
-<!--        </div>-->
-<!--    </form>-->
-<!--</article>-->
-
+<main>
+<article id="fonctat">
+    <form id="test2">
+        <h1 data-key="FormulaireTitre">Contactez-nous</h1>
+        <div class="separation"></div>
+        <div class="corps-formulaire">
+            <div class="gauche">
+                <div class="groupe">
+                    <label data-key="LabelPrenom">Votre Prénom</label>
+                    <input type="text" autocomplete="off" required />
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="groupe">
+                    <label data-key="LabelPrenom2">Votre Nom</label>
+                    <input type="text" autocomplete="off" required />
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="groupe">
+                    <label data-key="LabelEmail">Votre adresse e-mail</label>
+                    <input type="email" autocomplete="off" required />
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="groupe">
+                    <label data-key="LabelTelephone">Votre téléphone</label>
+                    <input type="tel" autocomplete="off" required />
+                    <i class="fas fa-mobile"></i>
+                </div>
+                <div class="groupe">
+                    <label data-key="LabelSujet">Sujet de votre demande</label>
+                    <select name="sujet" required>
+                        <option value="" data-key="OptionChoisir">-- Choisissez un sujet --</option>
+                        <option value="info_produit" data-key="OptionInfoProduit">Information sur un produit</option>
+                        <option value="commande" data-key="OptionCommande">Question sur une commande</option>
+                        <option value="livraison" data-key="OptionLivraison">Problème de livraison</option>
+                        <option value="retour" data-key="OptionRetour">Retour ou remboursement</option>
+                        <option value="partenariat" data-key="OptionPartenariat">Proposition de partenariat</option>
+                        <option value="autre" data-key="OptionAutre">Autre demande</option>
+                    </select>
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <div class="groupe">
+                    <input type="checkbox" value="1" name="user[subscribe_to_newsletter]" id="user_subscribe_to_newsletter">
+                    <label for="user_subscribe_to_newsletter" data-key="LabelNewsletter">Recevoir la newsletter</label>
+                </div>
+            </div>
+            <div class="droite">
+                <div class="groupe">
+                    <label data-key="LabelMessage">Message</label>
+                    <textarea placeholder="Saisissez ici..." required data-key="PlaceholderMessage"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="pied-formulaire" align="center">
+            <button type="submit" data-key="BoutonEnvoyer">Envoyer </button>
+        </div>
+    </form>
+</article>
+</main>
 <footer class="testC">
     <img id="floatC" class="logoC" src="images/logo.png" alt="logo">
     <p data-key="Droit" class="p"> © 2025 Sedana Essential — Tous droits réservés</p>
