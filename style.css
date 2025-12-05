@@ -1553,7 +1553,7 @@ p.C {
     margin: 0;
     color: inherit;
 }
-img.float {
+img.F {
     margin:0.5%;
     float: left;
 }
@@ -2245,6 +2245,7 @@ body.dark-mode #test2 .pied-formulaire button:hover {
         border-radius: 30px;
     }
 }
+
 
 
 
