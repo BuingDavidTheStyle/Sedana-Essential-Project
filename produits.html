@@ -3,73 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="JavaScript.js" defer></script>
-    <script src="traduction.js" defer></script>
+    <title>Sedana Essential</title>
     <link rel="stylesheet" href="style.css">
-    <title>Produits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <script src="traduction.js" defer></script>
 </head>
 
-
 <body>
+
 <header>
-<div class="head">
-    <div class="left">
-        <form class="search-bar" action="/recherche.php" method="GET">
-            <input type="text" name="q" placeholder="Rechercher un produit..." required>
-            <button type="submit">🔍</button>
-        </form>
+    <div class="head">
+        <div class="left">
+            <form class="search-bar" action="/recherche.php" method="GET">
+                <input type="text" name="q"  placeholder="Rechercher un produit..." required>
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+
+        <h1 class="same">Sedana Essential</h1>
+
+        <div class="right"></div>
     </div>
 
-    <h1 class="same">Sedana Essential</h1>
-   
-
-    <div class="right"></div> <!-- vide mais nécessaire pour centrer -->
-  
-</div>
-
-    <!-- Bouton mode clair/sombre -->
     <div class="night-toggle" onClick="switchMode()">
         <div id="moon" class="moon"></div>
-
     </div>
-     <div class="test">
+
+    <div class="test">
         <div class="test_content">
-     <span data-key="ContactNous">Contactez-nous au <b>+ 44 73.42.36.85.84</b></span>
-       </div>
+            <span data-key="ContactNous">Contactez-nous au + 44 73.42.36.85.84</span>
+        </div>
     </div>
 
     <div class="lang-toggle" onclick="toggleLangC()">🇫🇷 / 🇬🇧</div>
 
-
-
-
-
+    <a href="accueil.html" aria-label="Accueil">
+        <img id="logo" src="images/logo.png">
+    </a>
 </header>
 
-<div class="centre">
-    <a href="accueil.html" >
-        <img class="logoC" src="images/logo.png" alt="logo">
-    </a>
-</div>
 
-     <nav>
+<button class="login-btn" onclick="toggleLogin()" data-key="BtnLogin">Se Connecter</button>
+<div class="overlay" id="overlay" onclick="toggleLogin()"></div>
 
-        <ul class="navbar">
-            <li  class="navbar_item"><a class="navbar_link" href="accueil.html">
-                <span class="material-icons"><p data-key="Accueil" class="p2">Accueil</p></span></a></li>
-            <li  class="navbar_item"><a class="navbar_link" href="histoire.html"><p data-key="Histoire" class="p2">Histoire</p></a></li>
-            <li  class="navbar_item"><a class="navbar_link" href="produits.html"><span class="material-icons"><p data-key="Produits" class="p2">Produits</p></span></a></li>
-            <li  class="navbar_item"><a class="navbar_link" href="contact.html"><p data-key="Contact" class="p2">Contact</p></a></li>
-        </ul>
+<article id="D" class="float">
+    <div class="centero">
+        <h1 id="je_suis_differents" data-key="LoginTitle">Se Connecter</h1>
 
-     </nav>
+        <form method="post">
+            <button type="button" class="close-btn" onclick="toggleLogin()">×</button>
 
-     <main>
+            <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label data-key="LoginEmail">Adresse électronique *</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="password" required>
+                <span></span>
+                <label data-key="LoginPassword">Mot de passe *</label>
+            </div>
+
+            <div class="forgot" data-key="LoginForgot">Problème d'identification ?</div>
+
+            <input type="submit" value="Login" data-key="LoginBtn">
+
+            <div class="users_signup" data-key="LoginSignup">
+                S'inscrire <a href="#">Ici</a>
+            </div>
+        </form>
+    </div>
+</article>
+
+<nav>
+    <ul class="navbar">
+        <li class="navbar_item"><a class="navbar_link" href="accueil.html" data-key="Accueil">Accueil</a></li>
+        <li class="navbar_item"><a class="navbar_link" href="histoire.html" data-key="Histoire">Histoire</a></li>
+        <li class="navbar_item"><a class="navbar_link" href="produits.html" data-key="Produits">Produits</a></li>
+        <li class="navbar_item"><a class="navbar_link" href="contact.html" data-key="Contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
 
      <article id="pastrans">
          <a href="contact.html">
-            <img class="float" src="images/formulaire-removebg-preview.png">
+            <img class="float" src="images/formulaire-removebg-preview.png" alt="formulaire">
          </a>
          <p data-key="lienFormulaire" class="C"><--  appuyer ici pour être dirigé vers le formulelaire de participation aux ateliers</p>
 
@@ -151,7 +178,7 @@
 
             <!-- SECTION QUI CHANGE -->
             <section id="Cproduits-zone">
-                <p data-key="SelectionBouton" style="text-align:center; color:gray;">
+                <p class="p" data-key="SelectionBouton" style="text-align:center; color:gray;">
                     Sélectionnez une catégorie pour afficher les produits
                 </p>
 
@@ -189,12 +216,12 @@
 
         <img id="Cpopup-img" src="">
 
-        <!-- Texte dynamique (pas de data-key) -->
-        <h2 id="Cpopup-nom"></h2>
+        <!-- Texte dynamique  -->
+        <h2  id="Cpopup-nom"></h2>
         <p id="Cpopup-desc"></p>
-        <p id="Cpopup-prix"></p>
+        <p  id="Cpopup-prix"></p>
 
-        <!-- Texte FIXE à traduire -->
+        <!-- Texte fixe  -->
         <button id="Cadd-panier" data-key="btn_add_cart"></button>
 
     </div>
